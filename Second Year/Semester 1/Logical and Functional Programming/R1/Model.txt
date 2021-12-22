@@ -1,0 +1,35 @@
+13. a. Test the inclusion of two sets, represented as lists.
+    b. Eliminate all occurrences of an element from a list.
+
+13. a.
+recursiveGetCount(l1, l2, ..., ln) = {
+    0, if l is empty
+    1 + recursiveGetCount(l2, ..., ln), otherwise
+}
+
+recursiveSearchElement(l1, l2, ..., ln, e) = {
+    false, if l is empty
+    true, if l1 = e
+    recursiveSearchElement(l2, ..., ln, e), otherwise
+}
+
+recursiveTestInclusion(l1, l2, ..., ln, L1, L2, ..., LM) = {
+    true, if l is empty
+    false, if recursiveSearchElement(L1, L2, ..., LM, l1) is false
+    recursiveTestInclusion(l2, ..., ln, L1, L2, ..., LM) otherwise
+}
+
+recursiveIsSet(l1, l2, ..., ln) = {
+    true, if l is empty
+    false, if recursiveSearchElement(l2, ..., ln, l1) is true
+    recursiveIsSet(l2, ..., ln), otherwise
+}
+
+b.
+recursiveEliminate(l1, l2, ..., ln, e) = {
+    [], if l is empty
+    recursiveEliminate(l2, ..., ln, e), if l1 = e
+    l1 ∪ recursiveEliminate(l2, ..., ln, e), otherwise
+}
+
+

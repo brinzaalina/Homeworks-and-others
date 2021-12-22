@@ -1,0 +1,17 @@
+Generate all sub-strings of a length 2*n+1, formed from values of 0, 1 or -1, so a1 = ..., a2n+1 = 0 and 
+|a(i+1) - ai| = 1 or 2, for every 1 <= i <= 2n.
+
+contains(E, l1, l2, ..., ln) = {
+	false, if list is empty
+	true, if E = l1
+	contains(E, l2, ..., ln), otherwise
+}
+
+candidate(a_nextPosition) = {
+	a_position from [-1, 0, 1], if a_nextPosition is in [-1, 0, 1] and a_position != a_nextPosition
+}
+
+generate(length) = {
+	0, if length = 1
+	candidate(a_nextPosition) ∪ generate(length-1) , otherwise
+}
