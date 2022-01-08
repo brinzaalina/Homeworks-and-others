@@ -1,0 +1,40 @@
+7. Return the level of a node X in a tree of type (1). The level of the root element is 0.
+Ex: (A 2 B 0 C 2 D 0 E 0) and node C -> level 1
+(A 2 B 0 C 2 D 0 E 0) and node E -> level 2
+(A 2 B 2 C 1 I 0 F 1 G 0 D 2 E 0 H 0) and node G -> level 3
+(A 2 B 2 C 1 I 0 F 1 G 0 D 2 E 0 H 0) and node H -> level 2
+
+reversed(l1, l2, ..., ln, tail) = {
+	tail, if n = 0
+	reversed(l2, ..., ln, l1 ∪ tail), otherwise
+}
+
+reverseElements(l1, l2, ..., ln) = reversed(l1, l2, ..., ln, nil)
+
+contains(l1, l2, ..., ln, e) = {
+	false, if n = 0
+	true, if l1 = e
+	contains(l2, ..., ln, e), otherwise
+}
+
+getSubtree(e, l1, l2, ..., ln) = {
+	(l1, l2, ..., ln), if l1 = e
+	getSubtree(e, l2, ..., ln), otherwise
+}
+
+tree =(child, no_subtrees_of_previous_node, possible_parent)
+getParentSubtree(tree, nrSubtrees, nrNodes) = {
+	nil, if tree contains only the child
+	(possible_parent), if no_subtrees_of_previous_node + nrSubtrees >= nrNodes + 1
+	getParentSubtree(possible_parent, no_subtrees_of_previous_node + nrSubtrees, nrNodes + 1), otherwise
+}
+
+getParentSubtreeWrapper(tree) = getParentSubtree(tree, 0, 0)
+
+level(e, l1, ..., ln) = {
+	-1, if e is not in the list
+	level(parent, getParentSubtreeWrapper(getSubtree(e, l1, ..., ln)), where parent is the first element of getParentSubtreeWrapper(getSubtree(e, l1, ..., ln))
+}
+
+levelOfNode(e, l1, ..., ln) = level(e, reverseElements(l1, ..., ln))
+
