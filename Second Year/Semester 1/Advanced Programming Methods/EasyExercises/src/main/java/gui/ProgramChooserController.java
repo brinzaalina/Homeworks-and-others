@@ -184,6 +184,13 @@ public class ProgramChooserController {
                                         new AssignStatement("v", new ArithmeticExpression('+', new VariableExpression("v"), new ValueExpression(new IntValue(1)))))),
                                 new CompoundStatement(new SleepStatement(5), new PrintStatement(new ArithmeticExpression('*', new VariableExpression("v"), new ValueExpression(new IntValue(10))))))));
         allStatements.add(ex13);
+
+        //WAIT STATEMENT
+        IStatement ex14 = new CompoundStatement(new VariableDeclarationStatement("v", new IntType()),
+                new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(20))),
+                        new CompoundStatement(new WaitStatement(10),
+                                new PrintStatement(new ArithmeticExpression('*', new VariableExpression("v"), new ValueExpression(new IntValue(10)))))));
+        allStatements.add(ex14);
         return FXCollections.observableArrayList(allStatements);
     }
 }
