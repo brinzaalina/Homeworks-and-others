@@ -163,6 +163,17 @@ public class ProgramChooserController {
                                                         new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapExpression(new VariableExpression("a"))))))),
                                                 new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))))))));
         allStatements.add(ex11);
+
+        IStatement ex12 = new CompoundStatement(new VariableDeclarationStatement("v", new IntType()),
+                new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(20))),
+                        new CompoundStatement(new ForStatement(new ValueExpression(new IntValue(0)),
+                                new ValueExpression(new IntValue(3)),
+                                new ArithmeticExpression('+', new VariableExpression("v"), new ValueExpression(new IntValue(1))),
+                                new ForkStatement(new CompoundStatement(new PrintStatement(new VariableExpression("v")),
+                                        new AssignStatement("v", new ArithmeticExpression('+', new VariableExpression("v"), new ValueExpression(new IntValue(1))))))),
+                                new PrintStatement(new ArithmeticExpression('*', new VariableExpression("v"), new ValueExpression(new IntValue(10)))))));
+        allStatements.add(ex12);
+        
         return FXCollections.observableArrayList(allStatements);
     }
 }
