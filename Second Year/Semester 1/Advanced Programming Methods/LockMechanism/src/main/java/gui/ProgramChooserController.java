@@ -14,10 +14,7 @@ import model.type.BoolType;
 import model.type.IntType;
 import model.type.RefType;
 import model.type.StringType;
-import model.utils.MyDictionary;
-import model.utils.MyHeap;
-import model.utils.MyList;
-import model.utils.MyStack;
+import model.utils.*;
 import model.value.BoolValue;
 import model.value.IntValue;
 import model.value.StringValue;
@@ -58,7 +55,7 @@ public class ProgramChooserController {
             int id = programsListView.getSelectionModel().getSelectedIndex();
             try {
                 selectedStatement.typeCheck(new MyDictionary<>());
-                ProgramState programState = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), selectedStatement);
+                ProgramState programState = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), selectedStatement);
                 IRepository repository = new Repository(programState, "log" + (id + 1) + ".txt");
                 Controller controller = new Controller(repository);
                 programExecutorController.setController(controller);
@@ -163,6 +160,46 @@ public class ProgramChooserController {
                                                         new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapExpression(new VariableExpression("a"))))))),
                                                 new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))))))));
         allStatements.add(ex11);
+
+        IStatement ex12 = new CompoundStatement(new VariableDeclarationStatement("v1", new RefType(new IntType())),
+                new CompoundStatement(new VariableDeclarationStatement("v2", new RefType(new IntType())),
+                        new CompoundStatement(new VariableDeclarationStatement("x", new IntType()),
+                                new CompoundStatement(new VariableDeclarationStatement("q", new IntType()),
+                                        new CompoundStatement(new NewStatement("v1", new ValueExpression(new IntValue(20))),
+                                                new CompoundStatement(new NewStatement("v2", new ValueExpression(new IntValue(30))),
+                                                        new CompoundStatement(new NewLockStatement("x"),
+                                                                new CompoundStatement(new ForkStatement(
+                                                                        new CompoundStatement(new ForkStatement(
+                                                                                new CompoundStatement(new LockStatement("x"),
+                                                                                        new CompoundStatement(new WriteHeapStatement("v1", new ArithmeticExpression('-', new ReadHeapExpression(new VariableExpression("v1")), new ValueExpression(new IntValue(1)))),
+                                                                                                new UnlockStatement("x")))
+                                                                        ),
+                                                                                new CompoundStatement(new LockStatement("x"),
+                                                                                        new CompoundStatement(new WriteHeapStatement("v1", new ArithmeticExpression('*', new ReadHeapExpression(new VariableExpression("v1")), new ValueExpression(new IntValue(10)))),
+                                                                                                new UnlockStatement("x"))))
+                                                                ),
+                                                                        new CompoundStatement( new NewLockStatement("q"),
+                                                                                new CompoundStatement(new ForkStatement(
+                                                                                        new CompoundStatement( new ForkStatement(
+                                                                                                new CompoundStatement(new LockStatement("q"),
+                                                                                                        new CompoundStatement(new WriteHeapStatement("v2", new ArithmeticExpression('+', new ReadHeapExpression(new VariableExpression("v2")), new ValueExpression(new IntValue(5)))),
+                                                                                                                new UnlockStatement("q")))
+                                                                                        ),
+                                                                                                new CompoundStatement(new LockStatement("q"),
+                                                                                                        new CompoundStatement(new WriteHeapStatement("v2", new ArithmeticExpression('*', new ReadHeapExpression(new VariableExpression("v2")), new ValueExpression(new IntValue(10)))),
+                                                                                                                new UnlockStatement("q"))))
+                                                                                ),
+                                                                                new CompoundStatement(new NopStatement(),
+                                                                                        new CompoundStatement(new NopStatement(),
+                                                                                                new CompoundStatement(new NopStatement(),
+                                                                                                        new CompoundStatement(new NopStatement(),
+                                                                                                                new CompoundStatement(new LockStatement("x"),
+                                                                                                                        new CompoundStatement(new PrintStatement(new ReadHeapExpression(new VariableExpression("v1"))),
+                                                                                                                                new CompoundStatement(new UnlockStatement("x"),
+                                                                                                                                        new CompoundStatement(new LockStatement("q"),
+                                                                                                                                                new CompoundStatement(new PrintStatement(new ReadHeapExpression(new VariableExpression("v2"))),
+                                                                                                                                                        new UnlockStatement("q"))))))))))))))))))));
+        allStatements.add(ex12);
         return FXCollections.observableArrayList(allStatements);
     }
 }

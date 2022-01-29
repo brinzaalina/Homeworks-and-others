@@ -9,10 +9,7 @@ import model.type.BoolType;
 import model.type.IntType;
 import model.type.RefType;
 import model.type.StringType;
-import model.utils.MyDictionary;
-import model.utils.MyHeap;
-import model.utils.MyList;
-import model.utils.MyStack;
+import model.utils.*;
 import model.value.BoolValue;
 import model.value.IntValue;
 import model.value.StringValue;
@@ -31,7 +28,7 @@ public class Interpreter {
                         new PrintStatement(new VariableExpression("v"))));
         try {
             ex1.typeCheck(new MyDictionary<>());
-            ProgramState prg1 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex1);
+            ProgramState prg1 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex1);
             IRepository repo1;
             repo1 = new Repository(prg1, "log1.txt");
             Controller controller1 = new Controller(repo1);
@@ -48,7 +45,7 @@ public class Interpreter {
                                         IntValue(1)))), new PrintStatement(new VariableExpression("b"))))));
         try {
             ex2.typeCheck(new MyDictionary<>());
-            ProgramState prg2 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex2);
+            ProgramState prg2 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex2);
             IRepository repo2;
             repo2 = new Repository(prg2, "log2.txt");
             Controller controller2 = new Controller(repo2);
@@ -66,7 +63,7 @@ public class Interpreter {
                                         new PrintStatement(new VariableExpression("v"))))));
         try {
             ex3.typeCheck(new MyDictionary<>());
-            ProgramState prg3 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex3);
+            ProgramState prg3 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex3);
             IRepository repo3;
             repo3 = new Repository(prg3, "log3.txt");
             Controller controller3 = new Controller(repo3);
@@ -87,7 +84,7 @@ public class Interpreter {
 
         try {
             ex4.typeCheck(new MyDictionary<>());
-            ProgramState prg4 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex4);
+            ProgramState prg4 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex4);
             IRepository repo4;
             repo4 = new Repository(prg4, "log4.txt");
             Controller controller4 = new Controller(repo4);
@@ -105,7 +102,7 @@ public class Interpreter {
                                                 new PrintStatement(new VariableExpression("b")))))));
         try {
             ex5.typeCheck(new MyDictionary<>());
-            ProgramState prg5 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex5);
+            ProgramState prg5 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex5);
             IRepository repo5;
             repo5 = new Repository(prg5, "log5.txt");
             Controller controller5 = new Controller(repo5);
@@ -125,7 +122,7 @@ public class Interpreter {
                                                                         new CompoundStatement(new CloseReadFile(new VariableExpression("varf")), new CloseReadFile(new VariableExpression("varf")))))))))));
         try {
             ex6.typeCheck(new MyDictionary<>());
-            ProgramState prg6 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex6);
+            ProgramState prg6 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex6);
             IRepository repo6;
             repo6 = new Repository(prg6, "log6.txt");
             Controller controller6 = new Controller(repo6);
@@ -141,7 +138,7 @@ public class Interpreter {
                                 new PrintStatement(new VariableExpression("v")))));
         try {
             ex7.typeCheck(new MyDictionary<>());
-            ProgramState prg7 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex7);
+            ProgramState prg7 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex7);
             IRepository repo7;
             repo7 = new Repository(prg7, "log7.txt");
             Controller controller7 = new Controller(repo7);
@@ -157,7 +154,7 @@ public class Interpreter {
                                         new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new VariableExpression("a")))))));
         try {
             ex8.typeCheck(new MyDictionary<>());
-            ProgramState prg8 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex8);
+            ProgramState prg8 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex8);
             IRepository repo8;
             repo8 = new Repository(prg8, "log8.txt");
             Controller controller8 = new Controller(repo8);
@@ -174,7 +171,7 @@ public class Interpreter {
                                                 new PrintStatement(new ArithmeticExpression('+',new ReadHeapExpression(new ReadHeapExpression(new VariableExpression("a"))), new ValueExpression(new IntValue(5)))))))));
         try {
             ex9.typeCheck(new MyDictionary<>());
-            ProgramState prg9 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex9);
+            ProgramState prg9 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex9);
             IRepository repo9;
             repo9 = new Repository(prg9, "log9.txt");
             Controller controller9 = new Controller(repo9);
@@ -190,7 +187,7 @@ public class Interpreter {
                                         new PrintStatement(new ArithmeticExpression('+', new ReadHeapExpression(new VariableExpression("v")), new ValueExpression(new IntValue(5))))))));
         try {
             ex10.typeCheck(new MyDictionary<>());
-            ProgramState prg10 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex10);
+            ProgramState prg10 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex10);
             IRepository repo10;
             repo10 = new Repository(prg10, "log10.txt");
             Controller controller10 = new Controller(repo10);
@@ -207,7 +204,7 @@ public class Interpreter {
                                                 new PrintStatement(new ReadHeapExpression(new ReadHeapExpression(new VariableExpression("a")))))))));
         try {
             ex11.typeCheck(new MyDictionary<>());
-            ProgramState prg11 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex11);
+            ProgramState prg11 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex11);
             IRepository repo11;
             repo11 = new Repository(prg11, "log11.txt");
             Controller controller11 = new Controller(repo11);
@@ -226,7 +223,7 @@ public class Interpreter {
                                                 new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapExpression(new VariableExpression("a")))))))));
         try {
             ex12.typeCheck(new MyDictionary<>());
-            ProgramState prg12 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), ex12);
+            ProgramState prg12 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), new MyLockTable(), ex12);
             IRepository repo12;
             repo12 = new Repository(prg12, "log12.txt");
             Controller controller12 = new Controller(repo12);

@@ -16,43 +16,57 @@ public class MyDictionary<T1, T2> implements MyIDictionary<T1, T2>{
 
     @Override
     public boolean isDefined(T1 key) {
-        return this.dictionary.containsKey(key);
+        synchronized (this) {
+            return this.dictionary.containsKey(key);
+        }
     }
 
     @Override
     public T2 lookUp(T1 key) throws InterpreterException {
-        if (!isDefined(key))
-            throw new InterpreterException( key + " is not defined.");
-        return this.dictionary.get(key);
+        synchronized (this) {
+            if (!isDefined(key))
+                throw new InterpreterException(key + " is not defined.");
+            return this.dictionary.get(key);
+        }
     }
 
     @Override
     public void update(T1 key, T2 value) throws InterpreterException {
-        if (!isDefined(key))
-            throw new InterpreterException(key + " is not defined.");
-        this.dictionary.put(key, value);
+        synchronized (this) {
+            if (!isDefined(key))
+                throw new InterpreterException(key + " is not defined.");
+            this.dictionary.put(key, value);
+        }
     }
 
     @Override
     public Collection<T2> values() {
-        return this.dictionary.values();
+        synchronized (this) {
+            return this.dictionary.values();
+        }
     }
 
     @Override
     public void remove(T1 key) throws InterpreterException {
-        if (!isDefined(key))
-            throw new InterpreterException(key + " is not defined.");
-        this.dictionary.remove(key);
+        synchronized (this) {
+            if (!isDefined(key))
+                throw new InterpreterException(key + " is not defined.");
+            this.dictionary.remove(key);
+        }
     }
 
     @Override
     public Set<T1> keySet() {
-        return dictionary.keySet();
+        synchronized (this) {
+            return dictionary.keySet();
+        }
     }
 
     @Override
     public Map<T1, T2> getContent() {
-        return dictionary;
+        synchronized (this) {
+            return dictionary;
+        }
     }
 
     @Override
@@ -74,7 +88,9 @@ public class MyDictionary<T1, T2> implements MyIDictionary<T1, T2>{
 
     @Override
     public void put(T1 key, T2 value) {
-        this.dictionary.put(key, value);
+        synchronized (this) {
+            this.dictionary.put(key, value);
+        }
     }
 
 }
