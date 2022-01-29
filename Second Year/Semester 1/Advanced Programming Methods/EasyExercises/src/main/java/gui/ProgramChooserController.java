@@ -167,7 +167,7 @@ public class ProgramChooserController {
         //FOR STATEMENT
         IStatement ex12 = new CompoundStatement(new VariableDeclarationStatement("v", new IntType()),
                 new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(20))),
-                        new CompoundStatement(new ForStatement(new ValueExpression(new IntValue(0)),
+                        new CompoundStatement(new ForStatement("v", new ValueExpression(new IntValue(0)),
                                 new ValueExpression(new IntValue(3)),
                                 new ArithmeticExpression('+', new VariableExpression("v"), new ValueExpression(new IntValue(1))),
                                 new ForkStatement(new CompoundStatement(new PrintStatement(new VariableExpression("v")),
@@ -228,6 +228,22 @@ public class ProgramChooserController {
                                                                                         new CompoundStatement(new AssignStatement("w", new ValueExpression(new IntValue(4))),
                                                                                                 new PrintStatement(new ArithmeticExpression('*', new VariableExpression("v"), new ValueExpression(new IntValue(10)))))))))))))));
         allStatements.add(ex16);
+
+        //CONDITIONAL ASSIGNMENT
+        IStatement ex17 = new CompoundStatement(new VariableDeclarationStatement("b", new BoolType()),
+                new CompoundStatement(new VariableDeclarationStatement("c", new IntType()),
+                        new CompoundStatement(new AssignStatement("b", new ValueExpression(new BoolValue(true))),
+                                new CompoundStatement(new ConditionalAssignmentStatement("c",
+                                        new VariableExpression("b"),
+                                        new ValueExpression(new IntValue(100)),
+                                        new ValueExpression(new IntValue(200))),
+                                        new CompoundStatement(new PrintStatement(new VariableExpression("c")),
+                                                new CompoundStatement(new ConditionalAssignmentStatement("c",
+                                                        new ValueExpression(new BoolValue(false)),
+                                                        new ValueExpression(new IntValue(100)),
+                                                        new ValueExpression(new IntValue(200))),
+                                                        new PrintStatement(new VariableExpression("c"))))))));
+        allStatements.add(ex17);
         return FXCollections.observableArrayList(allStatements);
     }
 }
