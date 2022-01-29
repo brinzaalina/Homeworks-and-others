@@ -208,6 +208,26 @@ public class ProgramChooserController {
                                                                 new PrintStatement(new ValueExpression(new IntValue(300)))
                                                         ), new PrintStatement(new ValueExpression(new IntValue(300))))))))));
         allStatements.add(ex15);
+
+        //REPEAT UNTIL STATEMENT
+        IStatement ex16 = new CompoundStatement(new VariableDeclarationStatement("v", new IntType()),
+                new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(0))),
+                        new CompoundStatement(new RepeatUntilStatement(
+                                new CompoundStatement(new ForkStatement(new CompoundStatement(new PrintStatement(new VariableExpression("v")),
+                                        new AssignStatement("v", new ArithmeticExpression('-', new VariableExpression("v"), new ValueExpression(new IntValue(1)))))),
+                                        new AssignStatement("v", new ArithmeticExpression('+', new VariableExpression("v"), new ValueExpression(new IntValue(1))))),
+                                new RelationalExpression("==", new VariableExpression("v"), new ValueExpression(new IntValue(3)))
+                        ),
+                                new CompoundStatement(new VariableDeclarationStatement("x", new IntType()),
+                                        new CompoundStatement(new VariableDeclarationStatement("y", new IntType()),
+                                                new CompoundStatement(new VariableDeclarationStatement("z", new IntType()),
+                                                        new CompoundStatement(new VariableDeclarationStatement("w", new IntType()),
+                                                                new CompoundStatement(new AssignStatement("x", new ValueExpression(new IntValue(1))),
+                                                                        new CompoundStatement(new AssignStatement("y", new ValueExpression(new IntValue(2))),
+                                                                                new CompoundStatement(new AssignStatement("z", new ValueExpression(new IntValue(3))),
+                                                                                        new CompoundStatement(new AssignStatement("w", new ValueExpression(new IntValue(4))),
+                                                                                                new PrintStatement(new ArithmeticExpression('*', new VariableExpression("v"), new ValueExpression(new IntValue(10)))))))))))))));
+        allStatements.add(ex16);
         return FXCollections.observableArrayList(allStatements);
     }
 }
