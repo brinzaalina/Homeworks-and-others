@@ -191,6 +191,23 @@ public class ProgramChooserController {
                         new CompoundStatement(new WaitStatement(10),
                                 new PrintStatement(new ArithmeticExpression('*', new VariableExpression("v"), new ValueExpression(new IntValue(10)))))));
         allStatements.add(ex14);
+
+        //SWITCH STATEMENT
+        IStatement ex15 = new CompoundStatement(new VariableDeclarationStatement("a", new IntType()),
+                new CompoundStatement(new VariableDeclarationStatement("b", new IntType()),
+                        new CompoundStatement(new VariableDeclarationStatement("c", new IntType()),
+                                new CompoundStatement(new AssignStatement("a", new ValueExpression(new IntValue(1))),
+                                        new CompoundStatement(new AssignStatement("b", new ValueExpression(new IntValue(2))),
+                                                new CompoundStatement(new AssignStatement("c", new ValueExpression(new IntValue(5))),
+                                                        new CompoundStatement(new SwitchStatement(
+                                                                new ArithmeticExpression('*', new VariableExpression("a"), new ValueExpression(new IntValue(10))),
+                                                                new ArithmeticExpression('*', new VariableExpression("b"), new VariableExpression("c")),
+                                                                new CompoundStatement(new PrintStatement(new VariableExpression("a")), new PrintStatement(new VariableExpression("b"))),
+                                                                new ValueExpression(new IntValue(10)),
+                                                                new CompoundStatement(new PrintStatement(new ValueExpression(new IntValue(100))), new PrintStatement(new ValueExpression(new IntValue(200)))),
+                                                                new PrintStatement(new ValueExpression(new IntValue(300)))
+                                                        ), new PrintStatement(new ValueExpression(new IntValue(300))))))))));
+        allStatements.add(ex15);
         return FXCollections.observableArrayList(allStatements);
     }
 }
