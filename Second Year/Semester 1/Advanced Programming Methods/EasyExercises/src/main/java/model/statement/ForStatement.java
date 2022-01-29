@@ -11,14 +11,12 @@ import model.utils.MyIDictionary;
 import model.utils.MyIStack;
 
 public class ForStatement implements IStatement{
-    private final String variable;
     private final IExpression expression1;
     private final IExpression expression2;
     private final IExpression expression3;
     private final IStatement statement;
 
-    public ForStatement(String variable, IExpression expression1, IExpression expression2, IExpression expression3, IStatement statement) {
-        this.variable = variable;
+    public ForStatement(IExpression expression1, IExpression expression2, IExpression expression3, IStatement statement) {
         this.expression1 = expression1;
         this.expression2 = expression2;
         this.expression3 = expression3;
@@ -50,11 +48,11 @@ public class ForStatement implements IStatement{
 
     @Override
     public IStatement deepCopy() {
-        return new ForStatement(variable, expression1.deepCopy(), expression2.deepCopy(), expression3.deepCopy(), statement.deepCopy());
+        return new ForStatement(expression1.deepCopy(), expression2.deepCopy(), expression3.deepCopy(), statement.deepCopy());
     }
 
     @Override
     public String toString() {
-        return String.format("for(%s=%s; %s<%s; %s=%s) {%s}", variable, expression1, variable, expression2, variable, expression3, statement);
+        return String.format("for(v=%s; v<%s; v=%s) {%s}", expression1, expression2, expression3, statement);
     }
 }
