@@ -244,6 +244,16 @@ public class ProgramChooserController {
                                                         new ValueExpression(new IntValue(200))),
                                                         new PrintStatement(new VariableExpression("c"))))))));
         allStatements.add(ex17);
+
+        //MUL EXPRESSION
+        IStatement ex18 = new CompoundStatement(new VariableDeclarationStatement("v1", new IntType()),
+                new CompoundStatement(new VariableDeclarationStatement("v2", new IntType()),
+                        new CompoundStatement(new AssignStatement("v1", new ValueExpression(new IntValue(2))),
+                                new CompoundStatement(new AssignStatement("v2", new ValueExpression(new IntValue(3))),
+                                        new IfStatement(new RelationalExpression("!=", new VariableExpression("v1"), new ValueExpression(new IntValue(0))),
+                                                new PrintStatement(new MULExpression(new VariableExpression("v1"), new VariableExpression("v2"))),
+                                                new PrintStatement(new VariableExpression("v1")))))));
+        allStatements.add(ex18);
         return FXCollections.observableArrayList(allStatements);
     }
 }
