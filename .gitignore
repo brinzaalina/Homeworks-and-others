@@ -286,3 +286,63 @@ Second Year/Semester 1/Advanced Programming Methods/Procedures/.idea/modules.xml
 Second Year/Semester 1/Advanced Programming Methods/Procedures/.idea/runConfigurations.xml
 Second Year/Semester 1/Advanced Programming Methods/Procedures/.idea/vcs.xml
 Second Year/Semester 1/Advanced Programming Methods/Procedures/Procedures.iml
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/exceptions/InterpreterException.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/gui/button_style.css
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/gui/Main.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/gui/Pair.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/gui/ProgramChooserController.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/gui/ProgramChooserController.fxml
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/gui/ProgramExecutorController.fxml
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/expression/ArithmeticExpression.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/expression/IExpression.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/expression/LogicExpression.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/expression/ReadHeapExpression.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/expression/RelationalExpression.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/expression/ValueExpression.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/expression/VariableExpression.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/programState/ProgramState.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/AssignStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/CloseReadFile.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/CompoundStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/ForkStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/IfStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/IStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/NewStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/NopStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/OpenReadFile.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/PrintStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/ReadFile.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/VariableDeclarationStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/WhileStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/statement/WriteHeapStatement.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/type/BoolType.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/type/IntType.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/type/RefType.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/type/StringType.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/type/Type.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/utils/MyDictionary.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/utils/MyHeap.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/utils/MyIDictionary.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/utils/MyIHeap.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/utils/MyIList.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/utils/MyIStack.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/utils/MyList.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/value/BoolValue.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/value/IntValue.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/value/RefValue.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/value/StringValue.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/model/value/Value.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/module-info.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/repository/IRepository.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/repository/Repository.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/view/Command.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/view/ExitCommand.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/view/Interpreter.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/view/RunExampleCommand.class
+Second Year/Semester 1/Advanced Programming Methods/Procedures/target/classes/view/TextMenu.class
+Second Year/Semester 1/Advanced Programming Methods/Toy Language Interpreter A7/.idea/misc.xml
+Second Year/Semester 1/Advanced Programming Methods/Toy Language Interpreter A7/.idea/modules.xml
+Second Year/Semester 1/Advanced Programming Methods/Toy Language Interpreter A7/.idea/runConfigurations.xml
+Second Year/Semester 1/Advanced Programming Methods/Toy Language Interpreter A7/.idea/vcs.xml
+Second Year/Semester 1/Advanced Programming Methods/Toy Language Interpreter A7/.idea/workspace.xml
+Second Year/Semester 1/Advanced Programming Methods/Toy Language Interpreter A7/Toy Language Interpreter A7.iml
