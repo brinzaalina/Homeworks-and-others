@@ -1,14 +1,14 @@
 package model.statement;
 
 import exceptions.InterpreterException;
-import javafx.util.Pair;
 import model.expression.IExpression;
 import model.programState.ProgramState;
 import model.type.IntType;
 import model.type.Type;
 import model.utils.MyIDictionary;
 import model.utils.MyIHeap;
-import model.utils.MyISemaphoreTable;
+import model.utils.MyIToySemaphoreTable;
+import model.utils.Tuple;
 import model.value.IntValue;
 import model.value.Value;
 
@@ -16,52 +16,50 @@ import java.util.ArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class CreateSemaphoreStatement implements IStatement{
+public class NewSemaphoreStatement implements IStatement{
     private final String var;
-    private final IExpression expression;
+    private final IExpression expression1;
+    private final IExpression expression2;
     private static final Lock lock = new ReentrantLock();
 
-    public CreateSemaphoreStatement(String var, IExpression expression) {
+    public NewSemaphoreStatement(String var, IExpression expression1, IExpression expression2) {
         this.var = var;
-        this.expression = expression;
+        this.expression1 = expression1;
+        this.expression2 = expression2;
     }
+
     @Override
     public ProgramState execute(ProgramState state) throws InterpreterException {
         lock.lock();
         MyIDictionary<String, Value> symTable = state.getSymTable();
         MyIHeap heap = state.getHeap();
-        MyISemaphoreTable semaphoreTable = state.getSemaphoreTable();
-        IntValue nr = (IntValue) (expression.eval(symTable, heap));
-        int number = nr.getValue();
+        MyIToySemaphoreTable semaphoreTable = state.getToySemaphoreTable();
+        IntValue nr1 = (IntValue) (expression1.eval(symTable, heap));
+        IntValue nr2 = (IntValue) (expression2.eval(symTable, heap));
+        int number1 = nr1.getValue();
+        int number2 = nr2.getValue();
         int freeAddress = semaphoreTable.getFreeAddress();
-        semaphoreTable.put(freeAddress, new Pair<>(number, new ArrayList<>()));
+        semaphoreTable.put(freeAddress, new Tuple<>(number1, new ArrayList<>(), number2));
         if (symTable.isDefined(var) && symTable.lookUp(var).getType().equals(new IntType()))
             symTable.update(var, new IntValue(freeAddress));
         else
-            throw new InterpreterException(String.format("Error for variable %s: not defined/does not have int type!", var));
+            throw new InterpreterException(String.format("%s in not defined in the symbol table!", var));
         lock.unlock();
         return null;
     }
 
     @Override
     public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
-        if (typeEnv.lookUp(var).equals(new IntType())) {
-            if (expression.typeCheck(typeEnv).equals(new IntType()))
-                return typeEnv;
-            else
-                throw new InterpreterException("Expression is not of int type!");
-        } else {
-            throw new InterpreterException(String.format("%s is not of type int!", var));
-        }
+        return typeEnv;
     }
 
     @Override
     public IStatement deepCopy() {
-        return new CreateSemaphoreStatement(var, expression.deepCopy());
+        return new NewSemaphoreStatement(var, expression1.deepCopy(), expression2.deepCopy());
     }
 
     @Override
     public String toString() {
-        return String.format("createSemaphore(%s, %s)", var, expression);
+        return String.format("newSemaphore(%s, %s, %s)", var, expression1, expression2);
     }
 }
