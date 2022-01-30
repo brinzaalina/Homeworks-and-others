@@ -126,16 +126,15 @@
                <children>
                   <VBox alignment="TOP_CENTER">
                      <children>
-                        <Label text="Barrier Table" textFill="#6b2737">
+                        <Label alignment="TOP_CENTER" text="Latch Table" textFill="#6b2737">
                            <font>
                               <Font name="Berlin Sans FB" size="12.0" />
                            </font>
                         </Label>
-                        <TableView fx:id="barrierTableView" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #CCFBFE; -fx-background-radius: 5px;">
+                        <TableView fx:id="latchTableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 5px; -fx-background-color: #CCFBFE;">
                           <columns>
-                            <TableColumn fx:id="indexBarrierTableColumn" prefWidth="100.0" text="Index" />
-                            <TableColumn fx:id="valueBarrierTableColumn" prefWidth="100.0" text="Value" />
-                              <TableColumn fx:id="listBarrierTableColumn" prefWidth="100.0" text="List of values" />
+                            <TableColumn fx:id="latchLocationColumn" prefWidth="100.0" text="Location" />
+                            <TableColumn fx:id="latchValueColumn" prefWidth="100.0" text="Value" />
                           </columns>
                         </TableView>
                      </children>
