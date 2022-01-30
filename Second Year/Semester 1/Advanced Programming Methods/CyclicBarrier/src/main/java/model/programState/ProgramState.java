@@ -150,10 +150,10 @@ public class ProgramState {
         return heapStringBuilder.toString();
     }
 
-    public String barrierTableToString() {
+    public String barrierTableToString() throws InterpreterException {
         StringBuilder barrierTableStringBuilder = new StringBuilder();
         for (int key: barrierTable.getBarrierTable().keySet()) {
-            barrierTableStringBuilder.append(String.format("%d -> (%d, %s)", key, barrierTable.get(key).getKey(), barrierTable.get(key).getValue()));
+            barrierTableStringBuilder.append(String.format("%d -> (%d, %s)\n", key, barrierTable.get(key).getKey(), barrierTable.get(key).getValue()));
         }
         return barrierTableStringBuilder.toString();
     }
