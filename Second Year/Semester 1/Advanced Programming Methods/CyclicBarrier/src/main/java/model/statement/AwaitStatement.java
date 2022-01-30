@@ -28,7 +28,6 @@ public class AwaitStatement implements IStatement{
     public ProgramState execute(ProgramState state) throws InterpreterException {
         lock.lock();
         MyIDictionary<String, Value> symTable = state.getSymTable();
-        MyIHeap heap = state.getHeap();
         MyIBarrierTable barrierTable = state.getBarrierTable();
         if (symTable.isDefined(var)) {
             IntValue f = (IntValue) symTable.lookUp(var);
@@ -43,7 +42,8 @@ public class AwaitStatement implements IStatement{
                         state.getExeStack().push(this);
                     else {
                         list.add(state.getId());
-                        barrierTable.put(foundIndex, new Pair<>(N1, list));
+                        barrierTable.update(foundIndex, new Pair<>(N1, list));
+                        state.setBarrierTable(barrierTable);
                     }
                 }
             } else {

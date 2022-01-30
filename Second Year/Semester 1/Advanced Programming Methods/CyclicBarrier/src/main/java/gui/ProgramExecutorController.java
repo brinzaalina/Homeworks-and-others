@@ -78,7 +78,7 @@ public class ProgramExecutorController {
     private TableColumn<Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>>, Integer> valueBarrierTableColumn;
 
     @FXML
-    private TableColumn<Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>>, List<Integer>> listBarrierTableColumn;
+    private TableColumn<Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>>, String> listBarrierTableColumn;
 
     @FXML
     private Button runOneStepButton;
@@ -97,7 +97,7 @@ public class ProgramExecutorController {
         variableValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
         indexBarrierTableColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getKey()).asObject());
         valueBarrierTableColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getValue().getKey()).asObject());
-        listBarrierTableColumn.setCellValueFactory(p -> new SimpleObjectProperty<>(p.getValue().getValue().getValue()));
+        listBarrierTableColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getValue().getValue().toString()));
     }
 
     private ProgramState getCurrentProgramState() {
@@ -113,6 +113,7 @@ public class ProgramExecutorController {
     }
 
     private void populate() {
+
         populateHeapTableView();
         populateOutputListView();
         populateFileTableListView();
@@ -141,7 +142,7 @@ public class ProgramExecutorController {
             barrierList.add(entry);
         }
         barrierTableView.setItems(FXCollections.observableArrayList(barrierList));
-
+        barrierTableView.refresh();
     }
 
     private void populateHeapTableView() {
