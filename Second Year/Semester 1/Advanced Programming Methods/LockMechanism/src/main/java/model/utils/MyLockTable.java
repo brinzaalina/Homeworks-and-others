@@ -22,9 +22,13 @@ public class MyLockTable implements MyILockTable{
     }
 
     @Override
-    public void put(int key, int value) {
+    public void put(int key, int value) throws InterpreterException {
         synchronized (this) {
-            lockTable.put(key, value);
+            if (!lockTable.containsKey(key)) {
+                lockTable.put(key, value);
+            } else {
+                throw new InterpreterException(String.format("Lock table already contains the key %d!", key));
+            }
         }
     }
 
@@ -52,9 +56,13 @@ public class MyLockTable implements MyILockTable{
     }
 
     @Override
-    public void update(int position, int value) {
+    public void update(int position, int value) throws InterpreterException {
         synchronized (this) {
-            lockTable.replace(position, value);
+            if (lockTable.containsKey(position)) {
+                lockTable.replace(position, value);
+            } else {
+                throw new InterpreterException(String.format("%d is not present in the table!", position));
+            }
         }
     }
 
