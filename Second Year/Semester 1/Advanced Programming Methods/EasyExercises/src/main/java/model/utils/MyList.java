@@ -14,24 +14,32 @@ public class MyList<T> implements MyIList<T>{
 
     @Override
     public void add(T elem) {
-        this.list.add(elem);
+        synchronized (this) {
+            this.list.add(elem);
+        }
     }
 
     @Override
     public T pop() throws InterpreterException {
-        if (list.isEmpty())
-            throw new InterpreterException("The list is empty!");
-        return this.list.remove(0);
+        synchronized (this) {
+            if (list.isEmpty())
+                throw new InterpreterException("The list is empty!");
+            return this.list.remove(0);
+        }
     }
 
     @Override
     public boolean isEmpty() {
-        return this.list.isEmpty();
+        synchronized (this) {
+            return this.list.isEmpty();
+        }
     }
 
     @Override
     public List<T> getList() {
-        return list;
+        synchronized (this) {
+            return list;
+        }
     }
 
     @Override
