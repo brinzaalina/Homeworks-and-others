@@ -25,6 +25,7 @@ import repository.Repository;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ProgramChooserController {
@@ -109,7 +110,33 @@ public class ProgramChooserController {
         varProd.add("b");
         procTable.put("product", new Pair<>(varProd, prodProc));
 
-
+        IStatement ex2 = new CompoundStatement(
+                new VariableDeclarationStatement("v", new IntType()),
+                new CompoundStatement(
+                        new VariableDeclarationStatement("w", new IntType()),
+                        new CompoundStatement(
+                                new AssignStatement("v", new ValueExpression(new IntValue(2))),
+                                new CompoundStatement(
+                                        new AssignStatement("w", new ValueExpression(new IntValue(5))),
+                                        new CompoundStatement(
+                                                new CallProcStatement("sum", new ArrayList<>(Arrays.asList(new ArithmeticExpression('*', new VariableExpression("v"), new ValueExpression(new IntValue(10))), new VariableExpression("w")))),
+                                                new CompoundStatement(
+                                                        new PrintStatement(new VariableExpression("v")),
+                                                        new ForkStatement(
+                                                                new CompoundStatement(
+                                                                        new CallProcStatement("product", new ArrayList<>(Arrays.asList(new VariableExpression("v"), new VariableExpression("w")))),
+                                                                        new ForkStatement(
+                                                                                new CallProcStatement("sum", new ArrayList<>(Arrays.asList(new VariableExpression("v"), new VariableExpression("w"))))
+                                                                        )
+                                                                )
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                )
+        );
+        allStatements.add(ex2);
         return FXCollections.observableArrayList(allStatements);
     }
 }
