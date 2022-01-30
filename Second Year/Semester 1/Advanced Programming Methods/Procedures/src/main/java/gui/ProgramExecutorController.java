@@ -69,7 +69,7 @@ public class ProgramExecutorController {
     @FXML
     private Button runOneStepButton;
 
-    public void setController(Controller controller) {
+    public void setController(Controller controller) throws InterpreterException {
         this.controller = controller;
         populate();
     }
@@ -95,7 +95,7 @@ public class ProgramExecutorController {
         }
     }
 
-    private void populate() {
+    private void populate() throws InterpreterException {
         populateHeapTableView();
         populateOutputListView();
         populateFileTableListView();
@@ -105,7 +105,7 @@ public class ProgramExecutorController {
     }
 
     @FXML
-    private void changeProgramState(MouseEvent event) {
+    private void changeProgramState(MouseEvent event) throws InterpreterException {
         populateExecutionStackListView();
         populateSymbolTableView();
     }
@@ -149,13 +149,14 @@ public class ProgramExecutorController {
         populateNumberOfProgramStatesTextField();
     }
 
-    private void populateSymbolTableView() {
+    private void populateSymbolTableView(){
         ProgramState programState = getCurrentProgramState();
-        //TODO: change the view for the symbol table
-        MyIDictionary<String, Value> symbolTable = Objects.requireNonNull(programState).getSymTable();
+        MyIDictionary<String, Value> symbolTable = Objects.requireNonNull(programState).getTopSymTable();
         ArrayList<Pair<String, Value>> symbolTableEntries = new ArrayList<>();
-        for (Map.Entry<String, Value> entry: symbolTable.getContent().entrySet()) {
-            symbolTableEntries.add(new Pair<>(entry.getKey(), entry.getValue()));
+        if (symbolTable != null) {
+            for (Map.Entry<String, Value> entry : symbolTable.getContent().entrySet()) {
+                symbolTableEntries.add(new Pair<>(entry.getKey(), entry.getValue()));
+            }
         }
         symbolTableView.setItems(FXCollections.observableArrayList(symbolTableEntries));
     }

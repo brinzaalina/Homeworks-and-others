@@ -14,13 +14,11 @@ import model.type.BoolType;
 import model.type.IntType;
 import model.type.RefType;
 import model.type.StringType;
-import model.utils.MyDictionary;
-import model.utils.MyHeap;
-import model.utils.MyList;
-import model.utils.MyStack;
+import model.utils.*;
 import model.value.BoolValue;
 import model.value.IntValue;
 import model.value.StringValue;
+import model.value.Value;
 import repository.IRepository;
 import repository.Repository;
 
@@ -58,7 +56,9 @@ public class ProgramChooserController {
             int id = programsListView.getSelectionModel().getSelectedIndex();
             try {
                 selectedStatement.typeCheck(new MyDictionary<>());
-                ProgramState programState = new ProgramState(new MyStack<>(), new MyStack<>(), new MyList<>(), new MyDictionary<>(), new MyHeap(), selectedStatement);
+                MyIStack<MyIDictionary<String, Value>> symTableStack = new MyStack<>();
+                symTableStack.push(new MyDictionary<>());
+                ProgramState programState = new ProgramState(new MyStack<>(), symTableStack, new MyList<>(), new MyDictionary<>(), new MyHeap(), selectedStatement);
                 IRepository repository = new Repository(programState, "log" + (id + 1) + ".txt");
                 Controller controller = new Controller(repository);
                 programExecutorController.setController(controller);

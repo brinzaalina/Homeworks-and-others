@@ -36,7 +36,9 @@ public class MyStack<T> implements MyIStack<T> {
     }
 
     @Override
-    public T peek() {
+    public T peek() throws InterpreterException {
+        if (stack.isEmpty())
+            throw new InterpreterException("Stack is empty!");
         return this.stack.peek();
     }
 

@@ -78,6 +78,15 @@ public class ProgramState {
         return symTable;
     }
 
+    public MyIDictionary<String, Value> getTopSymTable() {
+        try {
+            return symTable.peek();
+        } catch (InterpreterException e) {
+            System.out.println("Stack is empty!");
+            return null;
+        }
+    }
+
     public MyIList<Value> getOut() {
         return out;
     }

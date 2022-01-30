@@ -7,7 +7,7 @@ import java.util.List;
 public interface MyIStack<T> {
     T pop() throws InterpreterException;
     void push(T element);
-    T peek();
+    T peek() throws InterpreterException;
     boolean isEmpty();
     List<T> getReversed();
     MyIStack<T> clone();
