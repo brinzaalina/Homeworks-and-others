@@ -89,4 +89,9 @@ public class MyProcTable implements MyIProcTable{
             }
         return toReturn;
     }
+
+    @Override
+    public String toString() {
+        return procTable.toString();
+    }
 }

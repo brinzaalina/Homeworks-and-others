@@ -20,7 +20,7 @@ public class ForkStatement implements IStatement{
         MyIStack<IStatement> newStack = new MyStack<>();
         newStack.push(statement);
         MyIStack<MyIDictionary<String, Value>> newSymTable = state.getSymTable().clone();
-        return new ProgramState(newStack, newSymTable, state.getOut(), state.getFileTable(), state.getHeap());
+        return new ProgramState(newStack, newSymTable, state.getOut(), state.getFileTable(), state.getHeap(), state.getProcTable());
     }
 
     @Override

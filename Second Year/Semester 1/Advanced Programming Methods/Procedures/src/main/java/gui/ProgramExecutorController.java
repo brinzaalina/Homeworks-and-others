@@ -3,6 +3,7 @@ package gui;
 import controller.Controller;
 import exceptions.InterpreterException;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -12,12 +13,10 @@ import model.programState.ProgramState;
 import model.statement.IStatement;
 import model.utils.MyIDictionary;
 import model.utils.MyIHeap;
+import model.utils.MyIProcTable;
 import model.value.Value;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 class Pair<T1, T2> {
@@ -67,6 +66,15 @@ public class ProgramExecutorController {
     private ListView<String> executionStackListView;
 
     @FXML
+    private TableView<Map.Entry<String, javafx.util.Pair<List<String>, IStatement>>> procTableView;
+
+    @FXML
+    private TableColumn<Map.Entry<String, javafx.util.Pair<List<String>, IStatement>>, javafx.util.Pair<String, List<String>>> procNameTableColumn;
+
+    @FXML
+    private TableColumn<Map.Entry<String, javafx.util.Pair<List<String>, IStatement>>, String> procBodyTableColumn;
+
+    @FXML
     private Button runOneStepButton;
 
     public void setController(Controller controller) throws InterpreterException {
@@ -81,6 +89,8 @@ public class ProgramExecutorController {
         valueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
         variableNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first));
         variableValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
+        procNameTableColumn.setCellValueFactory(p -> new SimpleObjectProperty<>(new javafx.util.Pair<String, List<String>>(p.getValue().getKey(), p.getValue().getValue().getKey())));
+        procBodyTableColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getValue().getValue().toString()));
     }
 
     private ProgramState getCurrentProgramState() {
@@ -102,12 +112,24 @@ public class ProgramExecutorController {
         populateProgramStateIdentifiersListView();
         populateSymbolTableView();
         populateExecutionStackListView();
+        populateProcTableView();
     }
 
     @FXML
     private void changeProgramState(MouseEvent event) throws InterpreterException {
         populateExecutionStackListView();
         populateSymbolTableView();
+    }
+
+    private void populateProcTableView() {
+        MyIProcTable procTable = Objects.requireNonNull(getCurrentProgramState()).getProcTable();
+        List<Map.Entry<String, javafx.util.Pair<List<String>, IStatement>>> procTableList = new ArrayList<>();
+        for (Map.Entry<String, javafx.util.Pair<List<String>, IStatement>> entry: procTable.getContent().entrySet()) {
+            Map.Entry<String, javafx.util.Pair<List<String>, IStatement>> entry1 = new AbstractMap.SimpleEntry<>(entry.getKey(), entry.getValue());
+            procTableList.add(entry1);
+        }
+        procTableView.setItems(FXCollections.observableList(procTableList));
+        procTableView.refresh();
     }
 
     private void populateNumberOfProgramStatesTextField() {
