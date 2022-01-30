@@ -3,6 +3,7 @@ package gui;
 import controller.Controller;
 import exceptions.InterpreterException;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -12,6 +13,7 @@ import model.programState.ProgramState;
 import model.statement.IStatement;
 import model.utils.MyIDictionary;
 import model.utils.MyIHeap;
+import model.utils.MyISemaphoreTable;
 import model.value.Value;
 
 import java.util.ArrayList;
@@ -67,6 +69,18 @@ public class ProgramExecutorController {
     private ListView<String> executionStackListView;
 
     @FXML
+    private TableView<Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>>> semaphoreTableView;
+
+    @FXML
+    private TableColumn<Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>>, Integer> indexSemaphoreTableColumn;
+
+    @FXML
+    private TableColumn<Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>>, Integer> valueSemaphoreTableColumn;
+
+    @FXML
+    private TableColumn<Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>>, List<Integer>> listSemaphoreTableColumn;
+
+    @FXML
     private Button runOneStepButton;
 
     public void setController(Controller controller) {
@@ -81,6 +95,9 @@ public class ProgramExecutorController {
         valueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
         variableNameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().first));
         variableValueColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().second.toString()));
+        indexSemaphoreTableColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getKey()).asObject());
+        valueSemaphoreTableColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getValue().getKey()).asObject());
+        listSemaphoreTableColumn.setCellValueFactory(p -> new SimpleObjectProperty<>(p.getValue().getValue().getValue()));
     }
 
     private ProgramState getCurrentProgramState() {
@@ -102,6 +119,7 @@ public class ProgramExecutorController {
         populateProgramStateIdentifiersListView();
         populateSymbolTableView();
         populateExecutionStackListView();
+        populateSemaphoreTableView();
     }
 
     @FXML
@@ -113,6 +131,17 @@ public class ProgramExecutorController {
     private void populateNumberOfProgramStatesTextField() {
         List<ProgramState> programStates = controller.getProgramStates();
         numberOfProgramStatesTextField.setText(String.valueOf(programStates.size()));
+    }
+
+    private void populateSemaphoreTableView() {
+        ProgramState programState = getCurrentProgramState();
+        MyISemaphoreTable semaphoreTable = Objects.requireNonNull(programState).getSemaphoreTable();
+        List<Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>>> semaphoreList = new ArrayList<>();
+        for (Map.Entry<Integer, javafx.util.Pair<Integer, List<Integer>>> entry: semaphoreTable.getSemaphoreTable().entrySet()) {
+            semaphoreList.add(entry);
+        }
+        semaphoreTableView.setItems(FXCollections.observableArrayList(semaphoreList));
+        semaphoreTableView.refresh();
     }
 
     private void populateHeapTableView() {

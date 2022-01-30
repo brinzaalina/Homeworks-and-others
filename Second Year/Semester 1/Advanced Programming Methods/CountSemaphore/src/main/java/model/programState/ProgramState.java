@@ -2,10 +2,7 @@ package model.programState;
 
 import exceptions.InterpreterException;
 import model.statement.IStatement;
-import model.utils.MyIDictionary;
-import model.utils.MyIHeap;
-import model.utils.MyIList;
-import model.utils.MyIStack;
+import model.utils.*;
 import model.value.Value;
 
 import java.io.BufferedReader;
@@ -17,27 +14,30 @@ public class ProgramState {
     private MyIList<Value> out;
     private MyIDictionary<String, BufferedReader> fileTable;
     private MyIHeap heap;
+    private MyISemaphoreTable semaphoreTable;
     private IStatement originalProgram;
     private int id;
     private static int lastId = 0;
 
-    public ProgramState(MyIStack<IStatement> stack, MyIDictionary<String,Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, MyIHeap heap, IStatement program) {
+    public ProgramState(MyIStack<IStatement> stack, MyIDictionary<String,Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, MyIHeap heap, MyISemaphoreTable semaphoreTable, IStatement program) {
         this.exeStack = stack;
         this.symTable = symTable;
         this.out = out;
         this.fileTable = fileTable;
         this.heap = heap;
+        this.semaphoreTable = semaphoreTable;
         this.originalProgram = program.deepCopy();
         this.exeStack.push(this.originalProgram);
         this.id = setId();
     }
 
-    public ProgramState(MyIStack<IStatement> stack, MyIDictionary<String,Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, MyIHeap heap) {
+    public ProgramState(MyIStack<IStatement> stack, MyIDictionary<String,Value> symTable, MyIList<Value> out, MyIDictionary<String, BufferedReader> fileTable, MyIHeap heap, MyISemaphoreTable semaphoreTable) {
         this.exeStack = stack;
         this.symTable = symTable;
         this.out = out;
         this.fileTable = fileTable;
         this.heap = heap;
+        this.semaphoreTable = semaphoreTable;
         this.id = setId();
     }
 
@@ -70,6 +70,10 @@ public class ProgramState {
         this.heap = newHeap;
     }
 
+    public void setSemaphoreTable(MyISemaphoreTable newSemaphoreTable) {
+        this.semaphoreTable = newSemaphoreTable;
+    }
+
     public MyIStack<IStatement> getExeStack() {
         return exeStack;
     }
@@ -88,6 +92,10 @@ public class ProgramState {
 
     public MyIHeap getHeap() {
         return heap;
+    }
+
+    public MyISemaphoreTable getSemaphoreTable() {
+        return semaphoreTable;
     }
 
     public boolean isNotCompleted() {
@@ -142,12 +150,20 @@ public class ProgramState {
         return heapStringBuilder.toString();
     }
 
+    public String semaphoreTableToString() throws InterpreterException {
+        StringBuilder semaphoreTableStringBuilder = new StringBuilder();
+        for (int key: semaphoreTable.getSemaphoreTable().keySet()) {
+            semaphoreTableStringBuilder.append(String.format("%d -> (%d, %s)\n", key, semaphoreTable.get(key).getKey(), semaphoreTable.get(key).getValue()));
+        }
+        return semaphoreTableStringBuilder.toString();
+    }
+
     @Override
     public String toString() {
-        return "Id: " + id + "\nExecution stack: \n" + exeStack.getReversed() + "\nSymbol table: \n" + symTable.toString() + "\nOutput list: \n" + out.toString() + "\nFile table:\n" + fileTable.toString() + "\nHeap memory:\n" + heap.toString() + "\n";
+        return "Id: " + id + "\nExecution stack: \n" + exeStack.getReversed() + "\nSymbol table: \n" + symTable.toString() + "\nOutput list: \n" + out.toString() + "\nFile table:\n" + fileTable.toString() + "\nHeap memory:\n" + heap.toString() + "\nSemaphore table:\n" + semaphoreTable.toString() + "\n";
     }
 
     public String programStateToString() throws InterpreterException {
-        return "Id: " + id + "\nExecution stack: \n" + exeStackToString() + "Symbol table: \n" + symTableToString() + "Output list: \n" + outToString() + "File table:\n" + fileTableToString() + "Heap memory:\n" + heapToString();
+        return "Id: " + id + "\nExecution stack: \n" + exeStackToString() + "Symbol table: \n" + symTableToString() + "Output list: \n" + outToString() + "File table:\n" + fileTableToString() + "Heap memory:\n" + heapToString() + "Semaphore table:\n" + semaphoreTableToString();
     }
 }

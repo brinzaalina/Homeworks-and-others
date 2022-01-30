@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProgramExecutorController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProgramExecutorController">
    <children>
       <VBox alignment="TOP_CENTER" style="-fx-background-color: #CDACA1;">
          <children>
@@ -121,6 +121,25 @@
                <VBox.margin>
                   <Insets left="5.0" right="5.0" />
                </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="300.0">
+                     <children>
+                        <Label text="Semaphore Table" textFill="#6b2737">
+                           <font>
+                              <Font name="Berlin Sans FB" size="12.0" />
+                           </font></Label>
+                        <TableView fx:id="semaphoreTableView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 5px; -fx-background-color: #CCFBFE;">
+                          <columns>
+                            <TableColumn fx:id="indexSemaphoreTableColumn" prefWidth="100.0" text="Index" />
+                            <TableColumn fx:id="valueSemaphoreTableColumn" prefWidth="100.0" text="Value" />
+                              <TableColumn fx:id="listSemaphoreTableColumn" prefWidth="100.0" text="List of values" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
             </HBox>
             <Button fx:id="runOneStepButton" alignment="TOP_CENTER" mnemonicParsing="false" onMouseClicked="#runOneStep" style="-fx-background-color: #CD8987; -fx-border-color: #6B2737; -fx-background-radius: 15px; -fx-border-radius: 15px;" text="Run one step" textFill="#6b2737">
                <font>
