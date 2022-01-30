@@ -38,27 +38,20 @@ public class NewBarrierStatement implements IStatement{
         if (symTable.isDefined(var))
             symTable.update(var, new IntValue(freeAddress));
         else
-            symTable.put(var, new IntValue(freeAddress));
+            throw new InterpreterException(String.format("%s is not defined in the symbol table!", var));
         lock.unlock();
         return null;
     }
 
     @Override
     public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
-        if (typeEnv.isDefined(var)) {
-            if (typeEnv.lookUp(var).equals(new IntType()))
-                if (expression.typeCheck(typeEnv).equals(new IntType()))
-                    return typeEnv;
-                else
-                    throw new InterpreterException("Expression is not of type int!");
-            else
-                throw new InterpreterException("Variable is not of type int!");
-        } else {
+        if (typeEnv.lookUp(var).equals(new IntType()))
             if (expression.typeCheck(typeEnv).equals(new IntType()))
                 return typeEnv;
             else
                 throw new InterpreterException("Expression is not of type int!");
-        }
+        else
+            throw new InterpreterException("Variable is not of type int!");
     }
 
     @Override

@@ -126,9 +126,9 @@
                <children>
                   <TableView fx:id="barrierTableView" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #CCFBFE; -fx-background-radius: 5px;">
                     <columns>
-                      <TableColumn fx:id="indexBarrierTableColumn" prefWidth="100.0" text="C1" />
-                      <TableColumn fx:id="valueBarrierTableColumn" prefWidth="100.0" text="C2" />
-                        <TableColumn fx:id="listBarrierTableColumn" prefWidth="100.0" text="Column X" />
+                      <TableColumn fx:id="indexBarrierTableColumn" prefWidth="100.0" text="Index" />
+                      <TableColumn fx:id="valueBarrierTableColumn" prefWidth="100.0" text="Value" />
+                        <TableColumn fx:id="listBarrierTableColumn" prefWidth="100.0" text="List of values" />
                     </columns>
                   </TableView>
                </children>

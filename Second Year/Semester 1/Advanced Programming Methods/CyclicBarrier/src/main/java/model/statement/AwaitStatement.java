@@ -58,13 +58,10 @@ public class AwaitStatement implements IStatement{
 
     @Override
     public MyIDictionary<String, Type> typeCheck(MyIDictionary<String, Type> typeEnv) throws InterpreterException {
-        if (typeEnv.isDefined(var)) {
-            if (typeEnv.lookUp(var).equals(new IntType()))
-                return typeEnv;
-            else
-                throw new InterpreterException("Var is not of type int!");
-        }
-        return typeEnv;
+        if (typeEnv.lookUp(var).equals(new IntType()))
+            return typeEnv;
+        else
+            throw new InterpreterException("Var is not of type int!");
     }
 
     @Override

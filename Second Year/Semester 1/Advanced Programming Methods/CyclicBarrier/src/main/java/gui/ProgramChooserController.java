@@ -168,39 +168,42 @@ public class ProgramChooserController {
                         new CompoundStatement(
                                 new VariableDeclarationStatement("v3", new RefType(new IntType())),
                                 new CompoundStatement(
-                                        new NewStatement("v1", new ValueExpression(new IntValue(2))),
+                                        new VariableDeclarationStatement("cnt", new IntType()),
                                         new CompoundStatement(
-                                                new NewStatement("v2", new ValueExpression(new IntValue(3))),
+                                                new NewStatement("v1", new ValueExpression(new IntValue(2))),
                                                 new CompoundStatement(
-                                                        new NewStatement("v3", new ValueExpression(new IntValue(4))),
+                                                        new NewStatement("v2", new ValueExpression(new IntValue(3))),
                                                         new CompoundStatement(
-                                                                new NewBarrierStatement("cnt", new ReadHeapExpression(new VariableExpression("v2"))),
+                                                                new NewStatement("v3", new ValueExpression(new IntValue(4))),
                                                                 new CompoundStatement(
-                                                                        new ForkStatement(
-                                                                                new CompoundStatement(
-                                                                                        new AwaitStatement("cnt"),
-                                                                                        new CompoundStatement(
-                                                                                                new WriteHeapStatement("v1", new ArithmeticExpression('*', new ReadHeapExpression(new VariableExpression("v1")), new ValueExpression(new IntValue(10)))),
-                                                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v1")))
-                                                                                        )
-                                                                                )
-                                                                        ),
+                                                                        new NewBarrierStatement("cnt", new ReadHeapExpression(new VariableExpression("v2"))),
                                                                         new CompoundStatement(
                                                                                 new ForkStatement(
                                                                                         new CompoundStatement(
                                                                                                 new AwaitStatement("cnt"),
                                                                                                 new CompoundStatement(
-                                                                                                        new WriteHeapStatement("v2", new ArithmeticExpression('*', new ReadHeapExpression(new VariableExpression("v2")), new ValueExpression(new IntValue(10)))),
-                                                                                                        new CompoundStatement(
-                                                                                                                new WriteHeapStatement("v2", new ArithmeticExpression('*', new ReadHeapExpression(new VariableExpression("v2")), new ValueExpression(new IntValue(10)))),
-                                                                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v2")))
-                                                                                                        )
+                                                                                                        new WriteHeapStatement("v1", new ArithmeticExpression('*', new ReadHeapExpression(new VariableExpression("v1")), new ValueExpression(new IntValue(10)))),
+                                                                                                        new PrintStatement(new ReadHeapExpression(new VariableExpression("v1")))
                                                                                                 )
                                                                                         )
                                                                                 ),
                                                                                 new CompoundStatement(
-                                                                                        new AwaitStatement("cnt"),
-                                                                                        new PrintStatement(new ReadHeapExpression(new VariableExpression("v3")))
+                                                                                        new ForkStatement(
+                                                                                                new CompoundStatement(
+                                                                                                        new AwaitStatement("cnt"),
+                                                                                                        new CompoundStatement(
+                                                                                                                new WriteHeapStatement("v2", new ArithmeticExpression('*', new ReadHeapExpression(new VariableExpression("v2")), new ValueExpression(new IntValue(10)))),
+                                                                                                                new CompoundStatement(
+                                                                                                                        new WriteHeapStatement("v2", new ArithmeticExpression('*', new ReadHeapExpression(new VariableExpression("v2")), new ValueExpression(new IntValue(10)))),
+                                                                                                                        new PrintStatement(new ReadHeapExpression(new VariableExpression("v2")))
+                                                                                                                )
+                                                                                                        )
+                                                                                                )
+                                                                                        ),
+                                                                                        new CompoundStatement(
+                                                                                                new AwaitStatement("cnt"),
+                                                                                                new PrintStatement(new ReadHeapExpression(new VariableExpression("v3")))
+                                                                                        )
                                                                                 )
                                                                         )
                                                                 )
