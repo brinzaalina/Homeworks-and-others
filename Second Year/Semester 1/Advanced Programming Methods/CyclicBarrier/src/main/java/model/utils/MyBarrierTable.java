@@ -1,5 +1,6 @@
 package model.utils;
 
+import exceptions.InterpreterException;
 import javafx.util.Pair;
 
 import java.util.HashMap;
@@ -13,21 +14,25 @@ public class MyBarrierTable implements MyIBarrierTable{
         this.barrierTable = new HashMap<>();
     }
 
-    public MyBarrierTable(HashMap<Integer, Pair<Integer, List<Integer>>> barrierTable) {
-        this.barrierTable = barrierTable;
-    }
-
     @Override
-    public void put(int key, Pair<Integer, List<Integer>> value) {
+    public void put(int key, Pair<Integer, List<Integer>> value) throws InterpreterException {
         synchronized (this) {
-            barrierTable.put(key, value);
+            if (!barrierTable.containsKey(key)) {
+                barrierTable.put(key, value);
+            } else {
+                throw new InterpreterException(String.format("Barrier table already contains the key %d!", key));
+            }
         }
     }
 
     @Override
-    public Pair<Integer, List<Integer>> get(int key) {
+    public Pair<Integer, List<Integer>> get(int key) throws InterpreterException {
         synchronized (this) {
-            return barrierTable.get(key);
+            if (barrierTable.containsKey(key)) {
+                return barrierTable.get(key);
+            } else {
+                throw new InterpreterException(String.format("Barrier table doesn't contain the key %d!", key));
+            }
         }
     }
 
@@ -54,9 +59,13 @@ public class MyBarrierTable implements MyIBarrierTable{
     }
 
     @Override
-    public void update(int key, Pair<Integer, List<Integer>> value) {
+    public void update(int key, Pair<Integer, List<Integer>> value) throws InterpreterException {
         synchronized (this) {
-            barrierTable.replace(key, value);
+            if (barrierTable.containsKey(key)) {
+                barrierTable.replace(key, value);
+            } else {
+                throw new InterpreterException(String.format("Barrier table doesn't contain key %d!", key));
+            }
         }
     }
 
