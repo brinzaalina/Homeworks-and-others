@@ -1,0 +1,751 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 73px;
+    width: 100%;
+    background-color: #1DA1F2;
+    color: white;
+    line-height: 2.5px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.bottom-bar-text {
+    padding-left: 26%;
+}
+
+#bottom-bar-header {
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#bottom-bar-p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.bottom-bar-buttons {
+    position: absolute;
+    left: 77.5%;
+    top: 25%;
+}
+
+.bottom-buttons {
+    border-radius: 19px;
+    padding: 7px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+#button1 {
+    width: 75px;
+    height: 37px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #e7e7e7d0;
+}
+
+#button2 {
+    width: 85px;
+    height: 37px;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border-right: 1px solid #e7e7e73d;
+    width: 26%;
+    height: 100%;
+    color: white;
+}
+
+.sidebar-list {
+    position: absolute;
+    left: 28%;
+    margin: 0px;
+    top: 0;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+#hashtag, #twitter-icon {
+    color: white;
+    padding-right: 22px;
+}
+
+#gear {
+    color: white;
+    padding-right: 19px;
+}
+
+.main-posts {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 26%;
+    top: 0;
+    width: 39.5%;
+    height: auto;
+    border-right: 1px solid #e7e7e73d;
+    color: white;
+}
+
+.extra-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 65.5%;
+    top: 0;
+    width: 34.5%;
+    height: auto;
+    color: white;
+}
+
+.top-bar {
+    position: fixed;
+    z-index: 1;
+    top: 0; 
+    left: 26%;
+    width: 74%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: inline;
+    border-left: 1px solid #e7e7e73d;
+    vertical-align: middle;
+}
+
+#arrow {
+    position: absolute;
+    padding: 20px 0px 20px 20px;
+    color: white;
+}
+
+#page-top {
+    position: absolute;
+    left: 7%;
+    top: 0;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0px;
+    line-height: 1px;
+    width: 520px;
+    border-right: 1px solid #e7e7e73d;
+}
+
+#badge {
+    width: 21px;
+    height: 21px;
+    padding-top: 1px;
+}
+
+.page-name {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.tweets {
+    font-size: 12px;
+    font-weight: lighter;
+    color: #e7e7e76b;
+}
+
+#search-bar {
+    position: absolute;
+    left: 56%;
+    top: 0;
+    background-color: rgb(34, 38, 41);
+    color: white;
+    border-radius: 22px;
+    border: 0px;
+    width: 350px;
+    height: 45px;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+input[name="Search"] {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: lighter;
+    margin-top: 13px;
+    padding-left: 11px;
+}
+
+button[type="Submit"] {
+    background-color: transparent;
+    color: #e7e7e76b;
+    border: none;
+    margin-left: 12px;
+}
+
+.cover-and-profile {
+    position: relative;
+    top: 50px;
+    height: 515px;
+    border-bottom: 1px solid #e7e7e73d;
+}
+
+#cover-image {
+    width: 100%;
+}
+
+#profile-image {
+    position: absolute;
+    width: 22%;
+    border-radius: 50%;
+    margin-top: -77px;
+    margin-left: 16px;
+    border: 4px solid black;
+}
+
+#follow-button {
+    position: relative;
+    top: 10px;
+    left: 84%;
+    width: 80px;
+    height: 37px;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 19px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#page-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 10px;
+    margin-left: 15px;
+    line-height: 0px;
+}
+
+.profile-name {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.tag-name {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #e7e7e76b;
+}
+
+.fa-location-dot, .fa-link {
+    margin-right: 5px;
+}
+
+#location-link-dob-joined {
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    color: #e7e7e76b;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+#location-link-dob {
+    display: flex;
+    flex-direction: row;
+}
+
+#location, #link {
+    margin-left: 5px;
+    margin-top: 6px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+#dob {
+    margin-left: 5px;
+    margin-top: 1px;
+    margin-bottom: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #1DA1F2;
+}
+
+#balloon {
+    opacity: 50%;
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+}
+
+#joined {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.fa-calendar-days {
+    margin-right: 3px;
+}
+
+#stats {
+    display: flex;
+    flex-direction: row;
+    color: #e7e7e76b;
+    font-size: 15px;
+}
+
+#stats p {
+    margin-right: 25px;
+}
+
+#navigations {
+    margin-top: 18px;
+    color: #e7e7e76b;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+#nav1, #nav3, #nav4 {
+    height: 35px;
+    width: 20%;
+    text-align: center;
+}
+
+#nav2 {
+    height: 35px;
+    width: 40%;
+    text-align: center;
+}
+
+#nav1 {
+    color: white;
+    border-bottom: 3px solid #1DA1F2;
+}
+
+.posts {
+    position: relative;
+    top: 50px;
+}
+
+[id^="post"] {
+    border-bottom: 1px solid #e7e7e73d;
+}
+
+.post-profile-image {
+    position: relative;
+    top: 10px;
+    left: 15px;
+    border-radius: 50%;
+    width: 8%;
+}
+
+.post-more-option {
+    position: relative;
+    top: -60px;
+    left: 95%;
+    font-size: large;
+    font-weight: bold;
+    color: #e7e7e76b;
+}
+
+.post-profile-name {
+    position: relative;
+    top: -105px;
+    left: 75px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.post-details {
+    position: relative;
+    top: -137px;
+    left: 147px;
+    color: #e7e7e76b;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+#retweeted-post {
+    position: relative;
+    top: -140px;
+    border: 1px solid #e7e7e73d;
+    border-radius: 15px;
+    margin-left: 73px;
+    margin-right: 15px;
+    height: 424px;
+}
+
+.post-profile-image-retweet {
+    position: relative;
+    top: 10px;
+    left: 15px;
+    border-radius: 50%;
+    width: 4%;
+}
+
+.post-profile-name-retweet {
+    position: relative;
+    top: -35px;
+    left: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.post-details-retweet {
+    position: relative;
+    top: -65px;
+    left: 165px;
+    color: #e7e7e76b;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.content-retweet {
+    position: relative;
+    top: -75px;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 18px;
+}
+
+#gif {
+    position: relative;
+    top: -70px;
+    width: 55%;
+    margin-left: 120px;
+}
+
+#photo-gif-tag {
+    position: relative;
+    top: -115px;
+    left: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.post-options {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: #e7e7e76b;
+    font-size: 13px;
+}
+
+.comments, .retweets, .likes, .share {
+    width: 130px;
+}
+
+#options1 {
+    top: -140px;
+    left: 80px;
+}
+
+#post1 a {
+    position: relative;
+    left: 80px;
+    top: -120px;
+    font-size: 15px;
+}
+
+#post1 {
+    height: 570px;
+}
+
+.post-content {
+    position: relative;
+    top: -145px;
+    padding-left: 77px;
+    font-size: 15px;
+}
+
+#options2, #options3, #options4 {
+    top: -150px;
+    left: 77px;
+}
+
+#post2 a {
+    position: relative;
+    left: 77px;
+    top: -130px;
+    font-size: 15px;
+}
+
+#post2 {
+    height: 180px;
+}
+
+#post3, #post4 {
+    height: 110px;
+}
+
+#empty {
+    height: 80px;
+}
+
+.new-twitter { 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 65px;
+    border: 1px solid #e7e7e73d;
+    left: 30px;
+    margin-right: 170px;
+    border-radius: 20px;
+}
+
+.new-twitter h3 {
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.new-twitter > p {
+    font-size: 13px;
+    font-weight: lighter;
+    color: #e7e7e76b;
+    margin-left: 15px;
+}
+
+.new-twitter-buttons {
+    width: 300px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid white;
+    margin-left: 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 80px;
+    left: 30px;
+    border: 1px solid #e7e7e73d;
+    border-radius: 20px;
+    margin-right: 169px;
+    height: 200px;
+}
+
+.photo-gallery img {
+    width: 117px;
+    height: 100px;
+}
+
+.photo-gallery > [alt="1"] {
+    border-top-left-radius: 20px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.photo-gallery > [alt="2"] {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.photo-gallery > [alt="3"] {
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid black;
+}
+
+.photo-gallery > [alt="4"] {
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid black;
+}
+
+.photo-gallery > [alt="6"] {
+    border-bottom-right-radius: 20px;
+    border-left: 1px solid black;
+}
+
+.might-like {
+    position: relative;
+    top: 80px;
+    left: 30px;
+    background-color: rgb(19, 23, 27);
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 169px;
+    height: 310px;
+}
+
+.might-like > h3 { 
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.account {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.account > img {
+    width: 14%;
+    border-radius: 50%;
+}
+
+.name-and-tag p.names {
+    position: relative;
+    top: -5px;
+    left: 15px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.name-and-tag p.tags {
+    position: relative;
+    top: -4px;
+    left: 13px;
+    margin: 0;
+    font-weight: lighter;
+    font-size: 15px;
+    color: #e7e7e76b;
+}
+
+.account button {
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    border-radius: 19px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#btn1 {
+    position: relative;
+    left: 40px;
+}
+
+#btn2 {
+    position: relative;
+    left: 27px;
+}
+
+#btn3 {
+    position: relative;
+    left: 121px;
+}
+
+.might-like a {
+    position: relative;
+    top: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.trends-for-you {
+    position: relative;
+    top: 80px;
+    left: 30px;
+    background-color: rgb(19, 23, 27);
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 169px;
+}
+
+.trends-for-you a {
+    position: relative;
+    top: -30px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.trends-for-you > h3 { 
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.trends-for-you > #gear {
+    position: relative;
+    top: -40px;
+    left: 310px;
+}
+
+#trends-wrapper {
+    position: relative;
+    top: -35px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 420px;
+}
+
+.type-trend, .tweets-trend, .additional-links {
+    font-size: 12px;
+    font-weight: lighter;
+    color: #e7e7e76b;
+}
+
+.trend {
+    line-height: 5px;
+}
+
+.main-tag {
+    font-size: 15px;
+}
+
+.tag-more-option {
+    position: relative;
+    left: 300px;
+    top: -65px;
+    font-weight: bold;
+    color: #e7e7e76b;
+    font-size: 18px;
+}
+
+.additional-links {
+    position: relative;
+    top: 80px;
+    left: 50px;
+    line-height: 7px;
+}
+
+.additional-links ul {
+    position: relative;
+    left: -40px;
+    list-style-type: none;
+}
+
+.additional-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#opt {
+    position: relative;
+    top: -3px;
+}
