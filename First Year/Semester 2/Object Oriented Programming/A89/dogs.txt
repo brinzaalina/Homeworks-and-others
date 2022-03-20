@@ -1,0 +1,7 @@
+Husky,Yoda,5,https://www.wowwow.ro/husky-caine/2152
+Golden Retriever,Murray,3,https://www.wowwow.ro/golden-retriever-caine/2151
+Poodle,Baby,2,https://www.wowwow.ro/pudel-standard-%28caniche%29-caine/2163
+Husky,Ice,7,https://www.wowwow.ro/husky-caine/2152
+Samoyed,Bear,0,https://www.wowwow.ro/samoyed-caine/2298
+Husky,Hudson,10,https://www.wowwow.ro/husky-caine/2152
+Akita Inu,Geo,6,https://www.wowwow.ro/akita-inu-caine/2131
