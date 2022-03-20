@@ -1,3 +1,3 @@
 # Homeworks-and-others
 
-Here I'm uploading my homeworks and projects.
+These are the projects done for university.
