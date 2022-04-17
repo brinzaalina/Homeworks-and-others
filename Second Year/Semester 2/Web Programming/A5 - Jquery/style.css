@@ -1,0 +1,21 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid rgb(182, 182, 182);
+    padding: 5px;
+}
+
+#column1-down, #column1-up, #column2-down, #column2-up, #column3-down, #column3-up, #column4-down, #column4-up {
+    visibility: hidden;
+}

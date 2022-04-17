@@ -1,0 +1,14 @@
+#myTable {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+#myTable th, #myTable td {
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+}
+
+#column1-down, #column1-up, #column2-down, #column2-up, #column3-down, #column3-up {
+    visibility: hidden;
+}
