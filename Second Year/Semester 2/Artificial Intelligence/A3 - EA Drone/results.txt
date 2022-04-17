@@ -1,0 +1,15 @@
+Seeds = [1, 30]
+Population size = 50, individuals size = 30
+Iterations = 50, mutation probability = 0.04, crossover probability = 0.8
+Average: 62.03333333333333
+Standard deviation: 9.350519890477868
+Seeds = [1, 30]
+Population size = 50, individuals size = 30
+Iterations = 50, mutation probability = 0.04, crossover probability = 0.8
+Average: 50.2
+Standard deviation: 10.793207740673452
+Seeds = [1, 30]
+Population size = 50, battery = 20
+Iterations = 50, mutation probability = 0.04, crossover probability = 0.8
+Average: 48.9
+Standard deviation: 8.882004278314664
