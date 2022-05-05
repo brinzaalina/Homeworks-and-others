@@ -30,6 +30,7 @@ These are the projects done for university.
     <li><a href="https://github.com/911-Brinza-Alina-Elena/Homeworks-and-others/tree/main/Second%20Year/Semester%202/Artificial%20Intelligence">Artificial Intelligence</a></li>
     <li><a href="https://github.com/911-Brinza-Alina-Elena/Homeworks-and-others/tree/main/Second%20Year/Semester%202/Web%20Programming">Web Programming</a></li>
     <li><a href="https://github.com/911-Brinza-Alina-Elena/Homeworks-and-others/tree/main/Second%20Year/Semester%202/Database%20Management%20Systems">Database Management Systems</a></li>
+    <li><a href="https://github.com/911-Brinza-Alina-Elena/Homeworks-and-others/tree/main/Second%20Year/Semester%202/Systems%20for%20Design%20and%20Implementation">Systems for Design and Implementation</a><li>
   </ul>
 </ul>
   
