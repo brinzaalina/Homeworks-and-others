@@ -1,0 +1,8 @@
+dependencies {
+    implementation project(':common')
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.5'
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '5.3.5'
+    implementation group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.8.0'
+    implementation 'org.postgresql:postgresql:42.3.3'
+
+}
