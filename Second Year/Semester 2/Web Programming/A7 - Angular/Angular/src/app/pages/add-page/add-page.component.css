@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
+.container-main {
+  width: 100%;
+  min-height: 100vh;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrap-main {
+  font-family: 'Quicksand', sans-serif;
+  position:relative;
+  width: 800px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 77px 40px 33px;
+  background-color: white;
+  align-content: center;
+}
+
+.form-main {
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.title-main {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
+  color: dimgrey;
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.subtitle-main {
+  font-size: 20px;
+  color: #2d3436;
+  display: block;
+  padding-bottom: 6px;
+}
+
+.wrap-input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #cac9c9;
+  border-radius: 13px;
+  padding: 10px 30px 10px 30px;
+  margin-bottom: 20px;
+}
+
+.input {
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  background: transparent;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.wrap-button {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepage-button {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button{
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  width: 60%;
+  border-radius: 10px;
+  height: 44px;
+  color:white;
+  position: relative;
+}
+
+.pagination {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pages{
+  font-size: 16px;
+  color: #555555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  border-radius: 4px;
+  height: 30px;
+  padding-right: 10px;
+  color:white;
+  position: relative;
+}
+
+a {
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  align-content: center;
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

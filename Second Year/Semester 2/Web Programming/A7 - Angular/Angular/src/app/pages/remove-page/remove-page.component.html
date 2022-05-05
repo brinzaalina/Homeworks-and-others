@@ -1,0 +1,43 @@
+<div class="container-main container-login">
+  <div class="wrap-main wrap-login">
+    <span class="title-main">
+      Delete Log
+    </span>
+    <table class='table'>
+      <tr>
+        <th>LogId</th>
+        <th>Type</th>
+        <th>Severity</th>
+        <th>Date</th>
+        <th>UserId</th>
+        <th>Message</th>
+      </tr>
+      <tr *ngFor="let log of logs">
+        <td *ngFor="let cell of log">{{cell}}</td>
+      </tr>
+    </table>
+    <nav class="pagination" id = "page-navigation">
+      <button class="pages btn btn-primary" *ngIf = "showPrevious" id = "prev-button" (click) = "goToPreviousPage()">Previous</button>
+      <button class="pages btn btn-primary" *ngIf = "showNext" id = "next-button" (click) = "goToNextPage()">Next</button>
+    </nav>
+    <div class="wrap-button">
+      <button (click)="loadTable()" class="button btn btn-primary">Load logs</button>
+    </div>
+    <div class="form-main form-login">
+      <span class="subtitle-main">
+        Log Id
+      </span>
+      <div class="wrap-input">
+        <input class="input" type="text" name="logid" placeholder="Log Id" #logId>
+      </div>
+      <div class="wrap-button">
+        <button (click)="deleteLog(logId.value)" class="button btn btn-primary" >Delete</button>
+      </div>
+    </div>
+    <div class="homepage-button">
+      <a routerLink="/homepage" routerLinkActive="active">
+        <button class="button btn btn-primary">Homepage</button>
+      </a>
+    </div>
+  </div>
+</div>
