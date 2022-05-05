@@ -1,0 +1,28 @@
+# UP, DOWN, LEFT, RIGHT
+DIRECTIONS = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
+# Map constants
+ROWS = 20
+COLUMNS = 20
+ROW_SIZE = 30
+COLUMN_SIZE = 30
+
+# Colors
+BLUE = (0, 0, 255)
+GRAYBLUE = (50, 120, 120)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLACK = (0, 0, 0)
+YELLOW = (255, 255, 0)
+WHITE = (255, 255, 255)
+
+MAX_SENSOR_COVERAGE = 5
+
+ITERATIONS = 200
+NUMBER_OF_ANTS = 80
+ALPHA = 1
+BETA = 1
+RHO = 0.1
+Q0 = 0.3
+BATTERY = 100
+
