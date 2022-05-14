@@ -1,0 +1,5 @@
+rootProject.name = 'lab10x-911-Brinza-Alina-Elena'
+include 'client'
+include 'core'
+include 'web'
+

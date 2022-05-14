@@ -1,0 +1,8 @@
+dependencies {
+    implementation(project(':web'))
+
+    implementation(group: 'org.springframework', name: 'spring-web', version: "$springVersion")
+
+    implementation(group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "$jacksonDatabindVersion")
+    implementation(group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: "$jacksonDatabindVersion")
+}

@@ -1,0 +1,9 @@
+apply plugin: 'war'
+
+dependencies {
+    implementation(project(':core'))
+    implementation(group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion")
+    implementation(group: 'javax.servlet', name: 'javax.servlet-api', version:"$javaxServeletApiVersion")
+
+
+}
