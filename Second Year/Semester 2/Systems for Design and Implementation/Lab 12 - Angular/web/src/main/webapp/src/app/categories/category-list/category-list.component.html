@@ -1,0 +1,15 @@
+<h2>Categories</h2>
+<table class="table table-bordered">
+    <tr>
+        <th> #</th>
+        <th> Name</th>
+    </tr>
+    <tr *ngFor="let category of categories; let i = index">
+        <td> {{i + 1}} </td>
+        <td>{{category.name}}</td>
+        <td><button (click)="updateCateogory(category)" class="btn btn-info bg-info m-2" type="button">Update</button></td>
+        <td><button (click)="deleteCategory(category)" class = "btn btn-danger bg-danger" type="button">Delete</button></td>
+    </tr>
+</table>
+<button class="btn btn-primary" (click)="navigateToAddCategory()">Add category</button>
+<button class="btn btn-primary m-2" (click)="sortByName()">Sort by name</button>

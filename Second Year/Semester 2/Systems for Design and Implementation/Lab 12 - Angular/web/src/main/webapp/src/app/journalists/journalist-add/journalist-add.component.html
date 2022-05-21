@@ -1,0 +1,13 @@
+<h2>Add Journalist</h2>
+<div class="container m-2">
+    <label class="form-label">Last name: <input type="text" class="form-control" #lastName></label>
+    <br>
+    <label class="form-label">First name: <input type="text" class="form-control" #firstName></label>
+    <br>
+    <label class="form-label">Email: <input type="text" class="form-control" #email></label>
+    <br>
+    <label class="form-label">Date of birth: <input type="date" class="form-control" #dob></label>
+    <br>
+    <button class="btn btn-primary" (click)="saveJournalist(lastName.value, firstName.value, email.value, dob.value)">Add journalist</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>

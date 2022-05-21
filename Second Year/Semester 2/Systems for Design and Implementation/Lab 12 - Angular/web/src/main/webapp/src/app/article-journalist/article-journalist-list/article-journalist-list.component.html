@@ -1,0 +1,16 @@
+<h2>Article-journalists</h2>
+<table class="table table-bordered">
+    <tr>
+        <th> #</th>
+        <th> Article ID</th>
+        <th> Journalist ID</th>
+    </tr>
+    <tr *ngFor="let articleJournalist of articleJournalists; let i = index">
+        <td> {{i + 1}} </td>
+        <td>{{articleJournalist.id.articleid}}</td>
+        <td>{{articleJournalist.id.journalistid}}</td>
+        <td><button (click)="deleteArticleJournalist(articleJournalist)" class = "btn btn-danger bg-danger" type="button">Delete</button></td>
+    </tr>
+</table>
+<button class="btn btn-primary" (click)="navigateToAddArticleJournalist()">Add article-journalist</button>
+<p>The journalist with the most articles is: {{bestJournalist.lastName}} {{bestJournalist.firstName}}! </p>

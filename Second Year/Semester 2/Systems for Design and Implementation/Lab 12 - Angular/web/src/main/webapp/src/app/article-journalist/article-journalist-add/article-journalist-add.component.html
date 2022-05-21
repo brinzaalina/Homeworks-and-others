@@ -1,0 +1,9 @@
+<h2>Add Article-Journalist</h2>
+<div class="container m-2">
+    <label class="form-label">Article ID: <input type="text" class="form-control" #articleId></label>
+    <br>
+    <label class="form-label">Journalist ID: <input type="text" class="form-control" #journalistId></label>
+    <br>
+    <button class="btn btn-primary" (click)="saveArticleJournalist(articleId.value, journalistId.value)">Add article-journalist</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>

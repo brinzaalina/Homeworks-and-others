@@ -1,0 +1,8 @@
+<h2>Update Category</h2>
+<div class="container m-2">
+    <h3>Category {{category.name}} details</h3>
+    <label class="form-label">Last name: <input type="text" class="form-control" [(ngModel)]="category.name"></label>
+    <br>
+    <button class="btn btn-primary" (click)="saveCategoryUpdates()">Save</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>

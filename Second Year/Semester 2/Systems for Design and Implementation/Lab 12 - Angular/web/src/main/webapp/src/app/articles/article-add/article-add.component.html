@@ -1,0 +1,11 @@
+<h2>Add Article</h2>
+<div class="container m-2">
+    <label class="form-label">Title: <input type="text" class="form-control" #title></label>
+    <br>
+    <label class="form-label">Text: <input type="text" class="form-control" #text></label>
+    <br>
+    <label class="form-label">Category ID: <input type="text" class="form-control" #categoryId></label>
+    <br>
+    <button class="btn btn-primary" (click)="saveArticle(title.value, text.value, categoryId.value)">Add article</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>

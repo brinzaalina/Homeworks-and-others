@@ -1,0 +1,7 @@
+<h2>Add Category</h2>
+<div class="container m-2">
+    <label class="form-label">Name: <input type="text" class="form-control" #name></label>
+    <br>
+    <button class="btn btn-primary" (click)="saveCategory(name.value)">Add category</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>
