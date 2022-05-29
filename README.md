@@ -2,7 +2,7 @@
 
 These are the projects done for university.
 
-### Frist Year
+### First Year
 <ul>
   <li>1<sup>st</sup> Semester</li>
   <ul>
