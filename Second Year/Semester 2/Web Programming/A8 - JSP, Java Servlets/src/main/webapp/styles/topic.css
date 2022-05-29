@@ -1,0 +1,20 @@
+.comment {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    border-radius: 4px;
+    align-content: center;
+}
+.comment:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+    left: .1em;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,26 @@
+plugins {
+    id 'war'
+    id 'java'
+}
+
+group 'org.forum'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation 'javax.servlet.jsp:javax.servlet.jsp-api:2.2.1'
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.5'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+test {
+    useJUnitPlatform()
+}
