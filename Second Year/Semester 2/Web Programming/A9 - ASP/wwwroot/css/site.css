@@ -1,0 +1,24 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#index-page, #login-form, #addFormDiv, #removeFormDiv, #viewLogsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

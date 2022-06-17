@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Desktop Folders\\Facultate\\Anul 2\\Sem 2\\Web programming\\Templates\\ASP\\ASPExam\\ASPExam.csproj": {}
+  },
+  "projects": {
+    "D:\\Desktop Folders\\Facultate\\Anul 2\\Sem 2\\Web programming\\Templates\\ASP\\ASPExam\\ASPExam.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desktop Folders\\Facultate\\Anul 2\\Sem 2\\Web programming\\Templates\\ASP\\ASPExam\\ASPExam.csproj",
+        "projectName": "ASPExam",
+        "projectPath": "D:\\Desktop Folders\\Facultate\\Anul 2\\Sem 2\\Web programming\\Templates\\ASP\\ASPExam\\ASPExam.csproj",
+        "packagesPath": "C:\\Users\\selen\\.nuget\\packages\\",
+        "outputPath": "D:\\Desktop Folders\\Facultate\\Anul 2\\Sem 2\\Web programming\\Templates\\ASP\\ASPExam\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\selen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

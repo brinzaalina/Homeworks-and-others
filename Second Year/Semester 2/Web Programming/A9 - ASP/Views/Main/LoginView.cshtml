@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Login";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Log Reports</title>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/js/site.js"></script>
+        <link rel="stylesheet" href="~/css/site.css" /><link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <form method="POST" action="Main/Login" id="login-form">
+            <label for="username" class="form-label"> Username:</label> <input type="text" class="form-control" id="username" name="username" /> 
+            <label for="password" class="form-label">Password: </label><input type="password" class="form-control" id="password" name="password" />
+            <input type="submit"  name="loginButton" class="btn btn-primary" value="Login"/>
+        </form>
+    </body>
+</html>
