@@ -1,0 +1,56 @@
+<div class="container-main container-login">
+    <div class="wrap-main wrap-login">
+      <span class="title-main">
+          Log Reports
+      </span>
+      <table class='table'>
+        <thead>
+          <tr>
+            <th>LogId</th>
+            <th>Type</th>
+            <th>Severity</th>
+            <th>Date</th>
+            <th>User</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let log of logs">
+            <td>{{log.id}}</td>
+            <td>{{log.type}}</td>
+            <td>{{log.severity}}</td>
+            <td>{{log.date | date: "dd-MM-yyyy"}}</td>
+            <td>{{log.user}}</td>
+            <td>{{log.logtext}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <nav class="pagination" id = "page-navigation">
+        <button class="pages btn btn-primary" *ngIf = "showPrevious" id = "prev-button" (click) = "goToPreviousPage()">Previous</button>
+        <button class="pages btn btn-primary" *ngIf = "showNext" id = "next-button" (click) = "goToNextPage()">Next</button>
+      </nav>
+      <div class="wrap-button">
+          <button class="button btn btn-primary" (click)="loadTable()">Load logs</button>
+      </div>
+      <div class="wrap-button">
+          <a routerLink="/addPage" routerLinkActive="active">
+          <button class="button btn btn-primary">Add Log</button>
+        </a>
+      </div>
+      <div class="wrap-button">
+        <a routerLink="/deletePage" routerLinkActive="active">
+          <button class="button btn btn-primary">Delete Log</button>
+        </a>
+      </div>
+      <div class="wrap-button">
+        <a routerLink="/filterPage" routerLinkActive="active">
+          <button class="button btn btn-primary">Filter Logs</button>
+        </a>
+      </div>
+      <div class="wrap-button">
+        <a routerLink="" routerLinkActive="active">
+          <button class="button btn btn-primary" (click)="removeUser()">Log out</button>
+        </a>
+      </div>
+    </div>
+  </div>

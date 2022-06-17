@@ -1,0 +1,51 @@
+<div class="container-main container-login">
+    <div class="wrap-main wrap-login">
+      <span class="title-main">
+        Filter Logs
+      </span>
+      <table class='table' id="filterTable">
+        <thead>
+        <tr>
+          <th>LogId</th>
+          <th>Type</th>
+          <th>Severity</th>
+          <th>Date</th>
+          <th>Message</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let log of logs">
+            <td>{{log.id}}</td>
+            <td>{{log.type}}</td>
+            <td>{{log.severity}}</td>
+            <td>{{log.date | date: "dd-MM-yyyy"}}</td>
+            <td>{{log.user}}</td>
+            <td>{{log.logtext}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="form-main form-login">
+        <span class="subtitle-main">
+          Type
+        </span>
+        <div class="wrap-input">
+          <input class="input" type="text" id="type" name="type" placeholder="Type" #type>
+        </div>
+        <span class="subtitle-main">
+          Severity
+        </span>
+        <div class="wrap-input">
+          <input class="input" type="text" id="severity" name="severity" placeholder="Severity" #severity>
+        </div>
+        <div class="wrap-button">
+          <button (click)="loadTable(type.value, severity.value)" id="filterButton" class="button btn btn-primary">Filter</button>
+        </div>
+      </div>
+  
+      <div class="homepage-button">
+        <a routerLink="/homepage" routerLinkActive="active">
+          <button class="button btn btn-primary">Homepage</button>
+        </a>
+      </div>
+    </div>
+  </div>
