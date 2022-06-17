@@ -1,0 +1,62 @@
+<div class="container fluid">
+    <h4>Players</h4>
+    <table class="table table-bordered">
+        <tr>
+            <th> #</th>
+            <th> Name</th>
+            <th> Position</th>
+        </tr>
+        <tr *ngFor="let player of players; let i = index">
+            <td> {{i + 1}} </td>
+            <td> {{player.name}} </td>
+            <td> {{player.position}} </td>
+        </tr>
+    </table>
+    <label for="username" class="form-label">Name:</label>
+    <input type="text" class="form-control" name="name" #name [(ngModel)]="searchName" (ngModelChange)="getPlayersMatching($event)">
+    <!-- <button class="btn btn-primary m-3" (click)="getPlayersMatching()">Get players</button>
+    <br> -->
+    <h4>First Degree</h4>
+    <table class="table table-bordered">
+        <tr>
+            <th> #</th>
+            <th> Name</th>
+            <th> Position</th>
+        </tr>
+        <tr *ngFor="let player1 of firstDegree; let i = index">
+            <td> {{i + 1}} </td>
+            <td> {{player1.name}} </td>
+            <td> {{player1.position}} </td>
+        </tr>
+    </table>
+
+    <h4>Second Degree</h4>
+    <table class="table table-bordered">
+        <tr>
+            <th> #</th>
+            <th> Name</th>
+            <th> Position</th>
+        </tr>
+        <tr *ngFor="let player2 of secondDegree; let i = index">
+            <td> {{i + 1}} </td>
+            <td> {{player2.name}} </td>
+            <td> {{player2.position}} </td>
+        </tr>
+    </table>
+
+    <h4>Third Degree</h4>
+    <table class="table table-bordered">
+        <tr>
+            <th> #</th>
+            <th> Name</th>
+            <th> Position</th>
+        </tr>
+        <tr *ngFor="let player3 of thirdDegree; let i = index">
+            <td> {{i + 1}} </td>
+            <td> {{player3.name}} </td>
+            <td> {{player3.position}} </td>
+        </tr>
+    </table>
+    <input type="checkbox" id="samePosition" name="samePosition" (change)="filterByPosition($event)">
+    <button class="btn btn-primary m-3" (click)="logout()">Log out</button>
+</div>
