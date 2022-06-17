@@ -1,0 +1,22 @@
+<h2>Readers</h2>
+<table class="table table-bordered">
+    <tr>
+        <th> #</th>
+        <th> Last name</th>
+        <th> First Name</th>
+        <th> Email</th>
+        <th> Phone</th>
+        <th> Address</th>
+    </tr>
+    <tr *ngFor="let reader of readers; let i = index">
+        <td> {{i + 1}} </td>
+        <td>{{reader.lastName}}</td>
+        <td>{{reader.firstName}}</td>
+        <td>{{reader.contact.email}}</td>
+        <td>{{reader.contact.phone}}</td>
+        <td>{{reader.contact.address}}</td>
+        <td><button (click)="updateReader(reader)" class="btn btn-info bg-info m-2" type="button">Update</button></td>
+        <td><button (click)="deleteReader(reader)" class = "btn btn-danger bg-danger" type="button">Delete</button></td>
+    </tr>
+</table>
+<button class="btn btn-primary" (click)="navigateToAddReader()">Add reader</button>

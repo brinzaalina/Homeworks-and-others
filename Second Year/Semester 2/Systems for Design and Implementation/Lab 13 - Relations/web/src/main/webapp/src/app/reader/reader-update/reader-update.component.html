@@ -1,0 +1,16 @@
+<h2>Update Reader</h2>
+<div class="container m-2">
+    <h3>Reader {{reader.lastName}} {{reader.firstName}} details</h3>
+    <label class="form-label">Last name: <input type="text" class="form-control" [(ngModel)]="reader.lastName"></label>
+    <br>
+    <label class="form-label">First name: <input type="text" class="form-control"  [(ngModel)]="reader.firstName"></label>
+    <br>
+    <label class="form-label">Email: <input type="text" class="form-control"  [(ngModel)]="reader.contact.email"></label>
+    <br>
+    <label class="form-label">Phone number: <input type="text" class="form-control"  [(ngModel)]="reader.contact.phone"></label>
+    <br>
+    <label class="form-label">Address: <input type="text" class="form-control"  [(ngModel)]="reader.contact.address"></label>
+    <br>
+    <button class="btn btn-primary" (click)="saveReaderUpdates()">Save</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>

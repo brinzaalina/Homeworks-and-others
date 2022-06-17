@@ -1,0 +1,40 @@
+<h2>Journalists</h2>
+<table class="table table-bordered">
+    <tr>
+        <th> #</th>
+        <th> Last name</th>
+        <th> First Name</th>
+        <th> Email</th>
+        <th> Date of birth</th>
+    </tr>
+    <tr *ngFor="let journalist of journalists; let i = index">
+        <td> {{i + 1}} </td>
+        <td>{{journalist.lastName}}</td>
+        <td>{{journalist.firstName}}</td>
+        <td>{{journalist.email}}</td>
+        <td>{{journalist.dob | date:'dd-MM-yyyy'}}</td>
+        <td><button (click)="updateJournalist(journalist)" class="btn btn-info bg-info m-2" type="button">Update</button></td>
+        <td><button (click)="deleteJournalist(journalist)" class = "btn btn-danger bg-danger" type="button">Delete</button></td>
+    </tr>
+</table>
+<button class="btn btn-primary" (click)="navigateToAddJournalist()">Add journalist</button>
+<p>Filter journalists by date of birth:</p>
+<table class="table table-bordered">
+    <tr>
+        <th> #</th>
+        <th> Last name</th>
+        <th> First Name</th>
+        <th> Email</th>
+        <th> Date of birth</th>
+    </tr>
+    <tr *ngFor="let journalist of filteredJournalists; let i = index">
+        <td> {{i + 1}} </td>
+        <td>{{journalist.lastName}}</td>
+        <td>{{journalist.firstName}}</td>
+        <td>{{journalist.email}}</td>
+        <td>{{journalist.dob | date:'dd-MM-yyyy'}}</td>
+    </tr>
+</table>
+<label class="form-label">Date of birth: <input type="date" class="form-control" #dob></label>
+<br>
+<button class="btn btn-primary m-2" (click)="filterJournalists(dob.value)">Filter</button>

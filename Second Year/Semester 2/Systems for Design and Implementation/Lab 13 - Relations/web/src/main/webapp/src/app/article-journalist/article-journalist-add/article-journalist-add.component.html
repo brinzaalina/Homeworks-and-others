@@ -1,0 +1,15 @@
+<h2>Add Article-Journalist</h2>
+<div class="container m-2">
+    <!-- <label class="form-label">Article ID: <input type="text" class="form-control" #articleId></label>
+    <br>
+    <label class="form-label">Journalist ID: <input type="text" class="form-control" #journalistId></label>
+    <br> -->
+    <select class="form-select" (change)="onSelectArticle($event)">
+        <option *ngFor="let article of articles" [value]="article.id">{{article.title}}</option>
+    </select>
+    <select class="form-select" (change)="onSelectJournalist($event)">
+        <option *ngFor="let journalist of journalists" [value]="journalist.id">{{journalist.firstName}} {{journalist.lastName}}</option>
+    </select>
+    <button class="btn btn-primary" (click)="saveArticleJournalist()">Add article-journalist</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>

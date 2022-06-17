@@ -1,0 +1,55 @@
+<h2>Articles</h2>
+<table class="table table-bordered">
+    <tr>
+        <th> #</th>
+        <th> Title</th>
+        <th> Text</th>
+        <th> Category</th>
+    </tr>
+    <tr *ngFor="let article of articles; let i = index">
+        <td> {{i + 1}} </td>
+        <td>{{article.title}}</td>
+        <td>{{article.text}}</td>
+        <td>{{article.category.name}}</td>
+        <td><button (click)="updateArticle(article)" class="btn btn-info bg-info m-2" type="button">Update</button></td>
+        <td><button (click)="deleteArticle(article)" class = "btn btn-danger bg-danger" type="button">Delete</button></td>
+    </tr>
+</table>
+<button class="btn btn-primary" (click)="navigateToAddArticle()">Add article</button>
+
+<table class="table table-bordered mt-5">
+    <tr>
+        <th> #</th>
+        <th> Title</th>
+        <th> Text</th>
+        <th> Category</th>
+    </tr>
+    <tr *ngFor="let article of filteredArticles; let i = index">
+        <td> {{i + 1}} </td>
+        <td>{{article.title}}</td>
+        <td>{{article.text}}</td>
+        <td>{{article.category.name}}</td>
+    </tr>
+</table>
+<p>Filter articles by category:</p>
+<label class="form-label">Category: <input type="text" class="form-control" #categoryId></label>
+<br>
+<button class="btn btn-primary m-2" (click)="filterArticles(categoryId.value)">Filter</button>
+
+<table class="table table-bordered mt-5">
+    <tr>
+        <th> #</th>
+        <th> Title</th>
+        <th> Text</th>
+        <th> Category</th>
+    </tr>
+    <tr *ngFor="let article of filteredByTitleArticles; let i = index">
+        <td> {{i + 1}} </td>
+        <td>{{article.title}}</td>
+        <td>{{article.text}}</td>
+        <td>{{article.category.name}}</td>
+    </tr>
+</table>
+<label class="form-label">Filter articles by title:<input type="text" class="form-control" #titleSubstring></label>
+<br>
+<button class="btn btn-primary m-2" (click)="filterByTitleArticles(titleSubstring.value)">Filter</button>

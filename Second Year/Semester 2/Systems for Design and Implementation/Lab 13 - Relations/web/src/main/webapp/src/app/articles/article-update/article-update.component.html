@@ -1,0 +1,15 @@
+<h2>Update Article</h2>
+<div class="container m-2">
+    <h3>Article {{article.title}} details</h3>
+    <label class="form-label">Title: <input type="text" class="form-control" [(ngModel)]="article.title"></label>
+    <br>
+    <label class="form-label">Text: <input type="text" class="form-control"  [(ngModel)]="article.text"></label>
+    <br>
+    <label class="form-label">Category: <input type="text" class="form-control"  [(ngModel)]="article.category.name"></label>
+    <br>
+    <select class="form-select" (change)="onSelect($event)">
+        <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+    </select>
+    <button class="btn btn-primary" (click)="saveArticleUpdates()">Save</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>

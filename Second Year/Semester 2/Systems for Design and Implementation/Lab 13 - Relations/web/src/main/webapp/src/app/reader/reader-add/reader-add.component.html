@@ -1,0 +1,15 @@
+<h2>Add Reader</h2>
+<div class="container m-2">
+    <label class="form-label">Last name: <input type="text" class="form-control" #lastName></label>
+    <br>
+    <label class="form-label">First name: <input type="text" class="form-control" #firstName></label>
+    <br>
+    <label class="form-label">Email: <input type="text" class="form-control" #email></label>
+    <br>
+    <label class="form-label">Phone number: <input type="text" class="form-control" #phone></label>
+    <br>
+    <label class="form-label">Address: <input type="text" class="form-control" #address></label>
+    <br>
+    <button class="btn btn-primary" (click)="saveReader(lastName.value, firstName.value, email.value, phone.value, address.value)">Add reader</button>
+    <button class="btn btn-danger m-2" (click)="onCancel()">Cancel</button>
+</div>
