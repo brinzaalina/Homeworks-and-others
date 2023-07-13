@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Search by keyword story","Searching by keyword school should display the corresponding article","SUCCESS","2023-05-20T16:57:53.1417279+03:00[Europe/Athens]","0.0","12.98"
+"Search by keyword story","Searching by keyword banana should display the corresponding article","ERROR","2023-05-20T16:58:06.7739967+03:00[Europe/Athens]","0.0","6.39"
+"Search by keyword story","Searching by keyword cool should display the corresponding article","SUCCESS","2023-05-20T16:58:13.3651295+03:00[Europe/Athens]","0.0","3.89"
+"Search by keyword story","Searching by keyword apple should display the corresponding article","SUCCESS","2023-05-20T16:58:17.3576328+03:00[Europe/Athens]","0.0","4.09"
+"Search by keyword emag","Search emag by keyword test DDT","FAILURE","2023-05-20T17:24:08.0642436+03:00[Europe/Athens]","0.0","54.51"
