@@ -1,0 +1,3 @@
+"D:\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Exercise_9_Smart_Pointer.dir/objects.a
+C:\Qt\Tools\mingw810_64\bin\ar.exe cr CMakeFiles\Exercise_9_Smart_Pointer.dir/objects.a @CMakeFiles\Exercise_9_Smart_Pointer.dir\objects1.rsp
+C:\Qt\Tools\mingw810_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Exercise_9_Smart_Pointer.dir/objects.a -Wl,--no-whole-archive -o Exercise_9_Smart_Pointer.exe -Wl,--out-implib,libExercise_9_Smart_Pointer.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Exercise_9_Smart_Pointer.dir\linklibs.rsp

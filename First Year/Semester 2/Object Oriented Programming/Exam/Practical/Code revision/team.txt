@@ -1,0 +1,3 @@
+Amalia,2,5
+Alina,4,6
+Elena,3,7

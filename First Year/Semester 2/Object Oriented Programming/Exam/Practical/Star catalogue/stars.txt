@@ -1,0 +1,5 @@
+Dn,Alla,100,10,20
+asjd,Alla,300,35,15
+Dasd,Alla,100,200,12
+DGH,Dil,10,13,11
+gsegr,Dil,200,40,10

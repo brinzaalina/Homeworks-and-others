@@ -1,0 +1,6 @@
+1,Are you happy?,Alina
+2,Are you having a breakdown rn?,Brinza
+4,Smile please,Alina
+10,How to be happy?,Elena
+41,Add question,Brinza
+467,When will I finally be happy?,Elena

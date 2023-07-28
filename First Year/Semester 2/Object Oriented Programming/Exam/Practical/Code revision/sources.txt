@@ -1,0 +1,9 @@
+Exercise 1,not revised,Alina,empty
+Exercise 2,revised,Alina,Amalia
+Exercise 3,revised,Alina,Elena
+Exercise 4,not revised,Amalia,empty
+Exercise 5,revised,Amalia,Alina
+Exercise 6,revised,Amalia,Elena
+Exercise 7,not revised,Elena,empty
+Exercise 8,revised,Elena,Alina
+Exercise 9,revised,Elena,Amalia

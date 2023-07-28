@@ -1,0 +1,4 @@
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Star catalogue/cmake-build-debug/CMakeFiles/Star_catalogue.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Star catalogue/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Star catalogue/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Star catalogue/cmake-build-debug/CMakeFiles/Star_catalogue_autogen.dir

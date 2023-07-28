@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Exercise_10_Channels"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Exercise_10_Channels">
+				<Option output="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Exercise_10_Channels.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/."/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 Exercise_10_Channels"/>
+					<CompileFile command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Exercise_10_Channels/fast">
+				<Option output="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Exercise_10_Channels.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/."/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Qt/Tools/mingw810_64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 Exercise_10_Channels/fast"/>
+					<CompileFile command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Tools/mingw810_64/bin/mingw32-make.exe -f &quot;D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/classes.cpp">
+			<Option target="Exercise_10_Channels"/>
+		</Unit>
+		<Unit filename="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/classes.h">
+			<Option target="Exercise_10_Channels"/>
+		</Unit>
+		<Unit filename="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/main.cpp">
+			<Option target="Exercise_10_Channels"/>
+		</Unit>
+		<Unit filename="D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 10 Channels/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

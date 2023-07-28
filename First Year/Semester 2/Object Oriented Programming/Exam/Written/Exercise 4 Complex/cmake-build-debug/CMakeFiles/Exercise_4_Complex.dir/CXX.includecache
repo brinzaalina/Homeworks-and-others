@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 4 Complex/classes.cpp
+classes.h
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 4 Complex/classes.h
+
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 4 Complex/classes.h
+vector
+-
+cassert
+-
+iostream
+-
+cstring
+-
+
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 4 Complex/main.cpp
+classes.h
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 4 Complex/classes.h
+

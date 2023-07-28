@@ -1,0 +1,4 @@
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Issue Tracker/cmake-build-debug/CMakeFiles/Issue_Tracker.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Issue Tracker/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Issue Tracker/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Issue Tracker/cmake-build-debug/CMakeFiles/Issue_Tracker_autogen.dir

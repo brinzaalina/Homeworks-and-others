@@ -1,0 +1,5 @@
+Digi Sport;0A33455X;75.00;false
+E-On;EED36677;122.00;true
+Orange;X990TTRR;46.00;false
+Vodafone;1234RR55;23.00;true
+Orange;TRE3EERR;10.00;false

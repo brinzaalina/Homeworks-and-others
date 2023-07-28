@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 9 Smart Pointer/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+

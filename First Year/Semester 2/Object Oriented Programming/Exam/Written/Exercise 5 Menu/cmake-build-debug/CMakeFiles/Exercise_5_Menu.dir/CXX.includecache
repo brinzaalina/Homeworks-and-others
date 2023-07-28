@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 5 Menu/classes.cpp
+classes.h
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 5 Menu/classes.h
+utility
+-
+
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 5 Menu/classes.h
+iostream
+-
+vector
+-
+
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 5 Menu/main.cpp
+classes.h
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Exercise 5 Menu/classes.h
+

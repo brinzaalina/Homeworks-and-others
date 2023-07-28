@@ -1,0 +1,3 @@
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Second Attempt/Exercise 2/cmake-build-debug/CMakeFiles/Exercise_2.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Second Attempt/Exercise 2/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Written/Second Attempt/Exercise 2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

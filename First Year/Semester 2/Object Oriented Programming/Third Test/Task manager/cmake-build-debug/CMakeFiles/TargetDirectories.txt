@@ -1,0 +1,4 @@
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/Task_manager.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/Task_manager_autogen.dir

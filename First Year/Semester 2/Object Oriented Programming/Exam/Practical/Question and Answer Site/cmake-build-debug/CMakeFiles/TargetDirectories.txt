@@ -1,0 +1,4 @@
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Question and Answer Site/cmake-build-debug/CMakeFiles/Question_and_Answer_Site.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Question and Answer Site/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Question and Answer Site/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Exam/Practical/Question and Answer Site/cmake-build-debug/CMakeFiles/Question_and_Answer_Site_autogen.dir

@@ -1,0 +1,3 @@
+"D:\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Template.dir/objects.a
+C:\Qt\Tools\mingw810_64\bin\ar.exe cr CMakeFiles\Template.dir/objects.a @CMakeFiles\Template.dir\objects1.rsp
+C:\Qt\Tools\mingw810_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Template.dir/objects.a -Wl,--no-whole-archive -o Template.exe -Wl,--out-implib,libTemplate.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Template.dir\linklibs.rsp

@@ -1,0 +1,3 @@
+"D:\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Vegetables.dir/objects.a
+C:\Qt\Tools\mingw810_64\bin\ar.exe cr CMakeFiles\Vegetables.dir/objects.a @CMakeFiles\Vegetables.dir\objects1.rsp
+C:\Qt\Tools\mingw810_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Vegetables.dir/objects.a -Wl,--no-whole-archive -o Vegetables.exe -Wl,--out-implib,libVegetables.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Vegetables.dir\linklibs.rsp

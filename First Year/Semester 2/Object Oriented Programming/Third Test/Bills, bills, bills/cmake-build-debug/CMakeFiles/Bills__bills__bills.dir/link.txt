@@ -1,0 +1,3 @@
+"D:\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Bills__bills__bills.dir/objects.a
+C:\Qt\Tools\mingw810_64\bin\ar.exe cr CMakeFiles\Bills__bills__bills.dir/objects.a @CMakeFiles\Bills__bills__bills.dir\objects1.rsp
+C:\Qt\Tools\mingw810_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Bills__bills__bills.dir/objects.a -Wl,--no-whole-archive -o Bills__bills__bills.exe -Wl,--out-implib,libBills__bills__bills.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Bills__bills__bills.dir\linklibs.rsp

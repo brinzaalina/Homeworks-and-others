@@ -1,0 +1,198 @@
+{
+	"BUILD_DIR" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/Task_manager_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager",
+	"CMAKE_EXECUTABLE" : "D:/CLion 2020.3.2/bin/cmake/win/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/CMakeLists.txt",
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/3.19.2/CMakeSystem.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeSystemSpecificInitialize.cmake",
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/3.19.2/CMakeCCompiler.cmake",
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/3.19.2/CMakeCXXCompiler.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeSystemSpecificInformation.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeGenericSystem.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeInitializeConfigs.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/WindowsPaths.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeFindCodeBlocks.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/ProcessorCount.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeCInformation.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeLanguageInformation.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Compiler/GNU-C.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Compiler/GNU.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows-GNU-C.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows-GNU.cmake",
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/3.19.2/CMakeRCCompiler.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeRCInformation.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows-windres.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows-GNU-C-ABI.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeCommonLanguageInclude.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeCXXInformation.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeLanguageInformation.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Compiler/GNU-CXX.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Compiler/GNU.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows-GNU-CXX.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows-GNU.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeCommonLanguageInclude.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeParseArguments.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeParseArguments.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake",
+		"C:/Qt/5.15.2/mingw81_64/lib/cmake/Qt5Charts/Qt5ChartsConfig.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Domain/Domain.h",
+			"MU",
+			"JE6WBJKE3F/moc_Domain.cpp"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Exceptions/Exceptions.h",
+			"MU",
+			"3ZPKKT53DT/moc_Exceptions.cpp"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/GUI/GUI.h",
+			"MU",
+			"2LCCYRVYXB/moc_GUI.cpp"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Repository/Repository.h",
+			"MU",
+			"RSXGBB323P/moc_Repository.cpp"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Service/Service.h",
+			"MU",
+			"QJ36PKLCSN/moc_Service.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/Task_manager_autogen/include",
+	"MOC_COMPILATION_FILE" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/Task_manager_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CHARTS_LIB", "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Domain",
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Exceptions",
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/GUI",
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Repository",
+		"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Service",
+		"C:/Qt/5.15.2/mingw81_64/include",
+		"C:/Qt/5.15.2/mingw81_64/include/QtCore",
+		"C:/Qt/5.15.2/mingw81_64/mkspecs/win32-g++",
+		"C:/Qt/5.15.2/mingw81_64/include/QtGui",
+		"C:/Qt/5.15.2/mingw81_64/include/QtANGLE",
+		"C:/Qt/5.15.2/mingw81_64/include/QtWidgets",
+		"C:/Qt/5.15.2/mingw81_64/include/QtCharts",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+		"C:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+		"C:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"C:/Qt/Tools/mingw810_64/bin/g++.exe",
+		"-dM",
+		"-E",
+		"-c",
+		"D:/CLion 2020.3.2/bin/cmake/win/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/Task_manager_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/Task_manager_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "C:/Qt/5.15.2/mingw81_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "C:/Qt/5.15.2/mingw81_64/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/cmake-build-debug/CMakeFiles/Task_manager_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Domain/Domain.cpp",
+			"MU"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Exceptions/Exceptions.cpp",
+			"MU"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/GUI/GUI.cpp",
+			"MU"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Repository/Repository.cpp",
+			"MU"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/Service/Service.cpp",
+			"MU"
+		],
+		[
+			"D:/Desktop Folders/Facultate/Sem 2/Object Oriented Programming/Third Test/Task manager/main.cpp",
+			"MU"
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

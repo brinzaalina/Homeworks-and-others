@@ -1,0 +1,9 @@
+Yevheniya,tester
+Deemer,programmer
+Lennart,tester
+Naseem,programmer
+
+segmentation fault,open,Lennart,no solver
+broken pipe,closed,Yevheniya,Deemer
+dead laptop,closed,Lennart,Naseem
+missing file,open,Yevheniya,no solver

@@ -1,0 +1,3 @@
+"D:\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Task_manager.dir/objects.a
+C:\Qt\Tools\mingw810_64\bin\ar.exe cr CMakeFiles\Task_manager.dir/objects.a @CMakeFiles\Task_manager.dir\objects1.rsp
+C:\Qt\Tools\mingw810_64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Task_manager.dir/objects.a -Wl,--no-whole-archive -o Task_manager.exe -Wl,--out-implib,libTask_manager.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Task_manager.dir\linklibs.rsp

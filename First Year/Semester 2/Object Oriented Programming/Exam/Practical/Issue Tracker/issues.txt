@@ -1,0 +1,4 @@
+segmentation fault,open,Lennart,no solver
+broken pipe,closed,Yevheniya,Deemer
+missing file,closed,Yevheniya,Naseem
+dead,open,Yevheniya,no solver
