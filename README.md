@@ -42,4 +42,10 @@ These are the projects done for university.
     <li><a href="https://github.com/911-Brinza-Alina-Elena/Homeworks-and-others/tree/main/Third%20Year/Semester%201/Public%20key%20cryptography">Public Key Cryptography</a></li>
     <li><a href="https://github.com/911-Brinza-Alina-Elena/Sem5_FLCD">Formal Languages and Compiler Design</a></li>
   </ul>
+  <li>6<sup>th</sup> Semester </li>
+  <ul>
+    <li><a href="https://github.com/brinzaalina/Homeworks-and-others/tree/main/Third%20Year/Semester%202/Software%20Systems%20for%20Verification%20and%20Validation">Software Systems for Verification and Validation</a></li>
+    <li><a href="https://github.com/brinzaalina/Homeworks-and-others/tree/main/Third%20Year/Semester%202/Numerical%20Calculus">Numerical Calculus</a></li>
+    <li><a href="https://github.com/brinzaalina/Homeworks-and-others/tree/main/Third%20Year/Semester%202/Design%20Patterns">Design Patterns</a></li>
+  </ul>
 </ul>
